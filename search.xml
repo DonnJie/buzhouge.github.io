@@ -1732,10 +1732,72 @@
     <content><![CDATA[<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204091315494.png"></p>
 <p>——2022.4.9    </p>
 <p>您好，我是杰。这是我的第一篇博客，用来记录和分享之后的学习与生活。<br>先谈谈我现在大学的经历，现在大三下。正如不少人一样，进入大学都对自己的学校不是那么“满意”。一腔热血，觉得自己的能力不该处于这个学校，一定能做出什么事情。不过我却只有三分钟热度，刚开始加入了各种社团，准备以后参加各种比赛，正有大干一场的准备。<br>​    大一上那年用51单片机点灯，用点阵显示几个字，做了个小功放，自己画PCD,做板子。也成功加入了学校内实践能力非常强的社团。大一上的生活可以说比较丰富的。但是之后突然袭来的新冠疫情，改变了很多事情（这只是给我自己的一个借口）。学校不开学，开始线上课程，我每天在家就是吃睡，根本无心上课。半个学期之后，课程内容什么都没学会，社团学长要做的作品还处于新建文件夹阶段，体重 从120+到了150+。这可能是我最安逸且焦虑的时期。到了5月份学校通知开学，开学不久之后就要来一次期中考试，并且一个月后又开始期末考试。社团作品进度依旧是5%… 无颜面对社团学长学姐，与学长沟通后退出社团（懦夫行为，这可能是我大学期间最大的遗憾）。退出社团之后开始全力补上之前落下的课程，最后期末考试没有挂科的课程，这是幸运的。<br>​    后面的时间大部分处于一种混沌的状态，不甘心现状，却又不敢大力去改变。也尝试过去参加比赛，电子设计大赛、数学建模、互联网+、大创项目，由于自己能力不足，当时也比较迷茫，也找不到方向，同时也没有契合自己的队友。最终这些比赛都止步于校赛、参与奖。刚退出社团的时候，当时跟我一起加入社团的朋友还经常邀请我一起组队比赛，但我都拒绝了（真的很懦弱）。后面看到他拿到了许多大的奖项，我只能祝福他，并且羡慕他。<br>​    我不知道是因为疫情还是因为什么，时间过得非常快，不知不觉就已经到了大三下。大二一年及大三上都是平平淡淡的度过，教室-食堂-宿舍。什么都没有获得，好的一点是成绩处于20%（不发达地区双非），目前看来能正常毕业。少有的比较值得庆祝的事情就是收获了爱情，和成功拿到了驾驶证。<br>现在正在写这篇文章的我，依然不知道以后会怎么样，将来会干嘛。很迷茫，文章写的也很乱。我并不是一个甘心平凡的人，我现在还有一些斗志，创建这个网站，写这篇博客的本心是寻求改变。暂定考研本校，希望多年后能将自己提升到一个自己满意的程度。</p>
-<p>​    感谢您阅读，谢谢！</p>
+<p>​    感谢您的阅读，谢谢！</p>
 ]]></content>
       <tags>
         <tag>Begin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cisco Packet Tracer 实验——配置交换机</title>
+    <url>/2022/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%8C/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为路由器的配置</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer-实验——配置交换机"><a href="#Cisco-Packet-Tracer-实验——配置交换机" class="headerlink" title="Cisco Packet Tracer 实验——配置交换机"></a>Cisco Packet Tracer 实验——配置交换机</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>辨识交换机、路由器；熟悉网络设备接口、配线架、连接器等。</li>
+<li>掌握通过Console口连接交换机、路由器设备。</li>
+<li>掌握微机Telnet到交换机、路由器的配置方法。</li>
+<li>熟悉配置交换机的常用IOS命令。</li>
+</ul>
+<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ul>
+<li>微机串口与交换机、路由器的Console口连接。</li>
+<li>配置交换机、路由器允许微机Telnet权限</li>
+<li>配置交换机的基本参数，检查交换机的基本参数配置。</li>
+</ul>
+<h3 id="实验方法"><a href="#实验方法" class="headerlink" title="实验方法"></a>实验方法</h3><ul>
+<li>在Windows操作系统的计算机使用思科模拟器仿真。</li>
+<li>思科交换机、路由器实际操作与配置。</li>
+</ul>
+<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><p>交换机的基本配置模式</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152247394.png"></p>
+<ul>
+<li><p>用户模式：只允许用户访问有限量的基本监视命令。用户执行模式是在从 CLI 登录到 Cisco          交换机后所进入的默认模式。在switch&gt;提示符下键入enable，交换机进入特权命           令模式。</p>
+</li>
+<li><p>特权模式：特权模式的提示符为“#”，允许用户访问所有设备命令，如用于配置和管理的命令， </p>
+<p>​         特权执行模式可采用口令加以保护，使得只有获得授权的用户才能访问设备。</p>
+</li>
+<li><p>全局模式：在switch#提示符下键入configure terminal，出现提示符switch(config)#，此 </p>
+<p>​         时交换机处于全局设置模式，可以设置交换机的全局参数。</p>
+</li>
+<li><p>接口模式：要从全局配置模式下进入接口配置模式，应输入interface接口类型插槽号&#x2F;端口号</p>
+<pre><code>     命令。提示符将更改为switch(config-if)#。要退出接口配置模式，使用exit命          令。提示符恢复为switch (config)#，要退出全局配置模式，可以再次使用exit          命令。提示符切换为#，回到特权执行模式。进入以太网接口fastethernet0/1的命         令是`interface fastethernet 0/1`。
+</code></pre>
+</li>
+</ul>
+<h4 id="实验拓扑图"><a href="#实验拓扑图" class="headerlink" title="实验拓扑图"></a>实验拓扑图</h4><p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152252424.png"></p>
+<h4 id="交换机属性配置"><a href="#交换机属性配置" class="headerlink" title="交换机属性配置"></a>交换机属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span>  <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t  <span class="comment"># 进入全局模式</span></span><br><span class="line">hostname S1 <span class="comment"># 设置交换机的名字为S1</span></span><br><span class="line"><span class="built_in">enable</span> pass 123 <span class="comment"># 设置使能密码为 123</span></span><br><span class="line">line vty 0 4  <span class="comment"># 创建5个远程登录终端line</span></span><br><span class="line">line con 0    <span class="comment"># 创建con远程登录终端line</span></span><br><span class="line">login         <span class="comment"># 允许远程登录</span></span><br><span class="line">pass 123      <span class="comment"># 设置远程登录的口令为 123</span></span><br><span class="line">login         <span class="comment"># 运行远程登录</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152256696.png"></p>
+<h4 id="交换机IP地址的管理和配置"><a href="#交换机IP地址的管理和配置" class="headerlink" title="交换机IP地址的管理和配置"></a>交换机IP地址的管理和配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int vlan 1 <span class="comment"># 进入vlan 1局部设置模式</span></span><br><span class="line">ip address 192.168.1.1 255.255.255.0 <span class="comment"># 设置端口IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment">#端口默认是关闭的，开启端口</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152258400.png"></p>
+<h4 id="交换机端口属性配置"><a href="#交换机端口属性配置" class="headerlink" title="交换机端口属性配置"></a>交换机端口属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int fa0/1 <span class="comment"># 进入端口 f0/1局部设置模式</span></span><br><span class="line">duplex auto <span class="comment"># 设置工作方式为auto</span></span><br><span class="line">speed auto  <span class="comment"># 设置速度为auto</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152259786.png"></p>
+<h4 id="Tenet远程登陆"><a href="#Tenet远程登陆" class="headerlink" title="Tenet远程登陆"></a>Tenet远程登陆</h4><p>如果出现以下错误可能是line console 0 为设置密码，重新回去设置密码即可。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152301004.png"></p>
+<p>重新设置密码后成功远程登陆</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152302259.png"></p>
+<h1 id="实验二到此结束"><a href="#实验二到此结束" class="headerlink" title="实验二到此结束"></a>实验二到此结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
+      <tags>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
       </tags>
   </entry>
 </search>
