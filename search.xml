@@ -1961,9 +1961,9 @@
 <p>三层交换机路由表信息</p>
 <p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716986.png"></p>
 <p>三层交换机各个端口IP信息</p>
-<p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220417171648135.png" alt="image-20220417171648135"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171915570.png"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716340.png"></p>
-<h4 id="连通性测试"><a href="#连通性测试" class="headerlink" title="连通性测试"></a>连通性测试</h4><p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220417171721260.png" alt="image-20220417171721260"></p>
+<h4 id="连通性测试"><a href="#连通性测试" class="headerlink" title="连通性测试"></a>连通性测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171917227.png"></p>
 <p>由上图可知，PC0与PC1和PC2是连通的，所以此事属于不同Vlan的PC0、PC1、PC2、通过三层交换机实现了通信。</p>
 <h1 id="实验五结束"><a href="#实验五结束" class="headerlink" title="实验五结束"></a>实验五结束</h1>]]></content>
       <categories>
