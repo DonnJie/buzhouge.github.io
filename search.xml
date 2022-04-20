@@ -275,6 +275,100 @@
       </tags>
   </entry>
   <entry>
+    <title>谈谈自己</title>
+    <url>/2022/04/09/%E8%B0%88%E8%B0%88%E8%87%AA%E5%B7%B1/</url>
+    <content><![CDATA[<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204091315494.png"></p>
+<p>——2022.4.9    </p>
+<p>您好，我是杰。这是我的第一篇博客，用来记录和分享之后的学习与生活。<br>先谈谈我现在大学的经历，现在大三下。正如不少人一样，进入大学都对自己的学校不是那么“满意”。一腔热血，觉得自己的能力不该处于这个学校，一定能做出什么事情。不过我却只有三分钟热度，刚开始加入了各种社团，准备以后参加各种比赛，正有大干一场的准备。<br>​    大一上那年用51单片机点灯，用点阵显示几个字，做了个小功放，自己画PCD,做板子。也成功加入了学校内实践能力非常强的社团。大一上的生活可以说比较丰富的。但是之后突然袭来的新冠疫情，改变了很多事情（这只是给我自己的一个借口）。学校不开学，开始线上课程，我每天在家就是吃睡，根本无心上课。半个学期之后，课程内容什么都没学会，社团学长要做的作品还处于新建文件夹阶段，体重 从120+到了150+。这可能是我最安逸且焦虑的时期。到了5月份学校通知开学，开学不久之后就要来一次期中考试，并且一个月后又开始期末考试。社团作品进度依旧是5%… 无颜面对社团学长学姐，与学长沟通后退出社团（懦夫行为，这可能是我大学期间最大的遗憾）。退出社团之后开始全力补上之前落下的课程，最后期末考试没有挂科的课程，这是幸运的。<br>​    后面的时间大部分处于一种混沌的状态，不甘心现状，却又不敢大力去改变。也尝试过去参加比赛，电子设计大赛、数学建模、互联网+、大创项目，由于自己能力不足，当时也比较迷茫，也找不到方向，同时也没有契合自己的队友。最终这些比赛都止步于校赛、参与奖。刚退出社团的时候，当时跟我一起加入社团的朋友还经常邀请我一起组队比赛，但我都拒绝了（真的很懦弱）。后面看到他拿到了许多大的奖项，我只能祝福他，并且羡慕他。<br>​    我不知道是因为疫情还是因为什么，时间过得非常快，不知不觉就已经到了大三下。大二一年及大三上都是平平淡淡的度过，教室-食堂-宿舍。什么都没有获得，好的一点是成绩处于20%（不发达地区双非），目前看来能正常毕业。少有的比较值得庆祝的事情就是收获了爱情，和成功拿到了驾驶证。<br>现在正在写这篇文章的我，依然不知道以后会怎么样，将来会干嘛。很迷茫，文章写的也很乱。我并不是一个甘心平凡的人，我现在还有一些斗志，创建这个网站，写这篇博客的本心是寻求改变。暂定考研本校，希望多年后能将自己提升到一个自己满意的程度。</p>
+<p>感谢您的阅读，谢谢！</p>
+]]></content>
+      <tags>
+        <tag>Begin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cisco Packet Tracer实验————组建虚拟局域网</title>
+    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%B8%89/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为组建虚拟局域网</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————组建虚拟局域网"><a href="#Cisco-Packet-Tracer实验————组建虚拟局域网" class="headerlink" title="Cisco Packet Tracer实验————组建虚拟局域网"></a>Cisco Packet Tracer实验————组建虚拟局域网</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>掌握虚拟局域网配置技术。</li>
+<li>掌握VLAN的创建。</li>
+<li>掌握微机Telnet到交换机、路由器的配置方法。</li>
+<li>掌握配置交换机接口的Trunk。</li>
+</ul>
+<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><h4 id="Vlan特点"><a href="#Vlan特点" class="headerlink" title="Vlan特点"></a>Vlan特点</h4><ol>
+<li>限制网络上的广播，将网络划分为多个VLAN可减少参与广播风暴的设备数量。VLAN分段可以防止广播风暴波及整个网络。VLAN可以提供建立防火墙的机制，防止交换网络的过量广播。</li>
+<li>增强局域网的安全性，含有敏感数据的用户组可与网络的其余部分隔离，从而降低泄露机密信息的可能性。</li>
+<li>借助VLAN技术，能将不同地点、不同网络、不同用户组合在一起，形成一个虚拟的网络环境，就像使用本地VLAN一样方便、灵活、有效。</li>
+</ol>
+<h4 id="网络设备接口重点："><a href="#网络设备接口重点：" class="headerlink" title="网络设备接口重点："></a>网络设备接口重点：</h4><ol>
+<li>switchport mode access: 强制接口成为access接口，并且可以与对方主动进行协商，诱使对方成为Access模式。</li>
+<li>switchport mode dynamic desirable: 主动与对协商成为Trunk接口地可能性，如果邻居接口模式为Trunk&#x2F;desirable&#x2F;auto之一，则接口将变成trunk接口工作。如果不能形成trunk模式，则工作在Access模式。这种模式是现在交换机地。</li>
+<li>switchport mode dynamic auto: 只有邻居交换机主动与自己协商时才会变成Trunk接口，所以它是一种被动模式，当邻居接口为Trunk／desirable之一时，才会成为Trunk。如果不能形成trunk模式，则工作在Access模式。</li>
+<li>switchport mode trunk: 强制接口成为Trunk接口，并且主动诱使对方成为Trunk模式，所以当邻居交换机接口为trunk&#x2F;desirable&#x2F;auto时会成为Trunk接口。</li>
+<li>switchport nonegotiate: 严格地说，这不认为是种接口模式，它地作用只是阻止交换机接口发出DTP数据包，它必须与switchport mode trunk或者switchport mode Access一起运用。</li>
+<li>switchport mode dot1q-tunnel：配置交换机接口为隧道接口（非Trunk），以便与用户交换机地Trunk接口形成不对称链路。</li>
+</ol>
+<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171053647.png"></p>
+<h4 id="各PC之间的IP规划"><a href="#各PC之间的IP规划" class="headerlink" title="各PC之间的IP规划"></a>各PC之间的IP规划</h4><table>
+<thead>
+<tr>
+<th>PC0</th>
+<th>192.168.1.1</th>
+<th>255.255.255.0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PC1</td>
+<td>192.168.1.2</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>192.168.1.3</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>192.168.1.4</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>PC4</td>
+<td>192.168.1.5</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>PC5</td>
+<td>192.168.1.6</td>
+<td>255.255.255.0</td>
+</tr>
+</tbody></table>
+<h4 id="测试PC之间的连通性。"><a href="#测试PC之间的连通性。" class="headerlink" title="测试PC之间的连通性。"></a>测试PC之间的连通性。</h4><p>下图为使用PC0 <code>ping</code>PC1和PC2,由下图可知，此时PC0与PC1和PC2是能进行通信的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171101047.png"></p>
+<h4 id="Vlan划分"><a href="#Vlan划分" class="headerlink" title="Vlan划分"></a>Vlan划分</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171105123.png"></p>
+<h4 id="配置交换机"><a href="#配置交换机" class="headerlink" title="配置交换机"></a>配置交换机</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span>   <span class="comment">#进入特权模式</span></span><br><span class="line">conf t   <span class="comment">#进入全局模式</span></span><br><span class="line">vlan 10  <span class="comment">#新建vlan 10</span></span><br><span class="line">name first <span class="comment">#命名为first</span></span><br><span class="line">vlan 20  <span class="comment">#新建vlan 20</span></span><br><span class="line">name second <span class="comment">#命名为second</span></span><br><span class="line">vlan 30  <span class="comment">#新建vlan 30</span></span><br><span class="line">name third  <span class="comment">#命名为third</span></span><br><span class="line"></span><br><span class="line">int f0/2  <span class="comment"># 接口设置</span></span><br><span class="line">switchport mode access <span class="comment"># 选择access模式</span></span><br><span class="line">switchport access vlan 10 <span class="comment"># 将该接口分配到vlan 10</span></span><br><span class="line">int f0/3</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 20</span><br><span class="line">int f0/4</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 30</span><br><span class="line">int f0/1</span><br><span class="line">switchport mode trunk  <span class="comment">#trunk模式</span></span><br></pre></td></tr></table></figure>
+
+<p>两个交换机的配置都是这样，具体有些接口不一样的地方自行修改接口名。</p>
+<p>在特权模式下使用<code>show vlan</code>查看Vlan</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171217388.png"></p>
+<p>上图为分别为三个交换机上的fa0&#x2F;2,fa0&#x2F;3,fa0&#x2F;4接口分配到first,second,third三个vlan上面。</p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171235211.png"></p>
+<p>由上图，PC1 ping不通PC2,PC1在VLAN1，PC2在VLAN2,不在同一VLNA中。PC1ping通PC4,PC1和PC2都在VLAN1内。</p>
+<h1 id="实验三到此结束"><a href="#实验三到此结束" class="headerlink" title="实验三到此结束"></a>实验三到此结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
+      <tags>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>黑马程序员C++笔记(一)</title>
     <url>/2022/04/09/C++/%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98C++/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -1725,18 +1819,6 @@
       </tags>
   </entry>
   <entry>
-    <title>谈谈自己</title>
-    <url>/2022/04/09/%E8%B0%88%E8%B0%88%E8%87%AA%E5%B7%B1/</url>
-    <content><![CDATA[<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204091315494.png"></p>
-<p>——2022.4.9    </p>
-<p>您好，我是杰。这是我的第一篇博客，用来记录和分享之后的学习与生活。<br>先谈谈我现在大学的经历，现在大三下。正如不少人一样，进入大学都对自己的学校不是那么“满意”。一腔热血，觉得自己的能力不该处于这个学校，一定能做出什么事情。不过我却只有三分钟热度，刚开始加入了各种社团，准备以后参加各种比赛，正有大干一场的准备。<br>​    大一上那年用51单片机点灯，用点阵显示几个字，做了个小功放，自己画PCD,做板子。也成功加入了学校内实践能力非常强的社团。大一上的生活可以说比较丰富的。但是之后突然袭来的新冠疫情，改变了很多事情（这只是给我自己的一个借口）。学校不开学，开始线上课程，我每天在家就是吃睡，根本无心上课。半个学期之后，课程内容什么都没学会，社团学长要做的作品还处于新建文件夹阶段，体重 从120+到了150+。这可能是我最安逸且焦虑的时期。到了5月份学校通知开学，开学不久之后就要来一次期中考试，并且一个月后又开始期末考试。社团作品进度依旧是5%… 无颜面对社团学长学姐，与学长沟通后退出社团（懦夫行为，这可能是我大学期间最大的遗憾）。退出社团之后开始全力补上之前落下的课程，最后期末考试没有挂科的课程，这是幸运的。<br>​    后面的时间大部分处于一种混沌的状态，不甘心现状，却又不敢大力去改变。也尝试过去参加比赛，电子设计大赛、数学建模、互联网+、大创项目，由于自己能力不足，当时也比较迷茫，也找不到方向，同时也没有契合自己的队友。最终这些比赛都止步于校赛、参与奖。刚退出社团的时候，当时跟我一起加入社团的朋友还经常邀请我一起组队比赛，但我都拒绝了（真的很懦弱）。后面看到他拿到了许多大的奖项，我只能祝福他，并且羡慕他。<br>​    我不知道是因为疫情还是因为什么，时间过得非常快，不知不觉就已经到了大三下。大二一年及大三上都是平平淡淡的度过，教室-食堂-宿舍。什么都没有获得，好的一点是成绩处于20%（不发达地区双非），目前看来能正常毕业。少有的比较值得庆祝的事情就是收获了爱情，和成功拿到了驾驶证。<br>现在正在写这篇文章的我，依然不知道以后会怎么样，将来会干嘛。很迷茫，文章写的也很乱。我并不是一个甘心平凡的人，我现在还有一些斗志，创建这个网站，写这篇博客的本心是寻求改变。暂定考研本校，希望多年后能将自己提升到一个自己满意的程度。</p>
-<p>感谢您的阅读，谢谢！</p>
-]]></content>
-      <tags>
-        <tag>Begin</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cisco Packet Tracer 实验————配置交换机</title>
     <url>/2022/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%8C/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
@@ -1788,88 +1870,6 @@
 <p>重新设置密码后成功远程登陆</p>
 <p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152302259.png"></p>
 <h1 id="实验二到此结束"><a href="#实验二到此结束" class="headerlink" title="实验二到此结束"></a>实验二到此结束</h1>]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>局域网</category>
-      </categories>
-      <tags>
-        <tag>交换机</tag>
-        <tag>计算机网络</tag>
-        <tag>Cisco</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cisco Packet Tracer实验————组建虚拟局域网</title>
-    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%B8%89/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为组建虚拟局域网</p>
-</blockquote>
-<h1 id="Cisco-Packet-Tracer实验————组建虚拟局域网"><a href="#Cisco-Packet-Tracer实验————组建虚拟局域网" class="headerlink" title="Cisco Packet Tracer实验————组建虚拟局域网"></a>Cisco Packet Tracer实验————组建虚拟局域网</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
-<li>掌握虚拟局域网配置技术。</li>
-<li>掌握VLAN的创建。</li>
-<li>掌握微机Telnet到交换机、路由器的配置方法。</li>
-<li>掌握配置交换机接口的Trunk。</li>
-</ul>
-<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><h4 id="Vlan特点"><a href="#Vlan特点" class="headerlink" title="Vlan特点"></a>Vlan特点</h4><ol>
-<li>限制网络上的广播，将网络划分为多个VLAN可减少参与广播风暴的设备数量。VLAN分段可以防止广播风暴波及整个网络。VLAN可以提供建立防火墙的机制，防止交换网络的过量广播。</li>
-<li>增强局域网的安全性，含有敏感数据的用户组可与网络的其余部分隔离，从而降低泄露机密信息的可能性。</li>
-<li>借助VLAN技术，能将不同地点、不同网络、不同用户组合在一起，形成一个虚拟的网络环境，就像使用本地VLAN一样方便、灵活、有效。</li>
-</ol>
-<h4 id="网络设备接口重点："><a href="#网络设备接口重点：" class="headerlink" title="网络设备接口重点："></a>网络设备接口重点：</h4><ol>
-<li>switchport mode access: 强制接口成为access接口，并且可以与对方主动进行协商，诱使对方成为Access模式。</li>
-<li>switchport mode dynamic desirable: 主动与对协商成为Trunk接口地可能性，如果邻居接口模式为Trunk&#x2F;desirable&#x2F;auto之一，则接口将变成trunk接口工作。如果不能形成trunk模式，则工作在Access模式。这种模式是现在交换机地。</li>
-<li>switchport mode dynamic auto: 只有邻居交换机主动与自己协商时才会变成Trunk接口，所以它是一种被动模式，当邻居接口为Trunk／desirable之一时，才会成为Trunk。如果不能形成trunk模式，则工作在Access模式。</li>
-<li>switchport mode trunk: 强制接口成为Trunk接口，并且主动诱使对方成为Trunk模式，所以当邻居交换机接口为trunk&#x2F;desirable&#x2F;auto时会成为Trunk接口。</li>
-<li>switchport nonegotiate: 严格地说，这不认为是种接口模式，它地作用只是阻止交换机接口发出DTP数据包，它必须与switchport mode trunk或者switchport mode Access一起运用。</li>
-<li>switchport mode dot1q-tunnel：配置交换机接口为隧道接口（非Trunk），以便与用户交换机地Trunk接口形成不对称链路。</li>
-</ol>
-<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171053647.png"></p>
-<h4 id="各PC之间的IP规划"><a href="#各PC之间的IP规划" class="headerlink" title="各PC之间的IP规划"></a>各PC之间的IP规划</h4><table>
-<thead>
-<tr>
-<th>PC0</th>
-<th>192.168.1.1</th>
-<th>255.255.255.0</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PC1</td>
-<td>192.168.1.2</td>
-<td>255.255.255.0</td>
-</tr>
-<tr>
-<td>PC2</td>
-<td>192.168.1.3</td>
-<td>255.255.255.0</td>
-</tr>
-<tr>
-<td>PC3</td>
-<td>192.168.1.4</td>
-<td>255.255.255.0</td>
-</tr>
-<tr>
-<td>PC4</td>
-<td>192.168.1.5</td>
-<td>255.255.255.0</td>
-</tr>
-<tr>
-<td>PC5</td>
-<td>192.168.1.6</td>
-<td>255.255.255.0</td>
-</tr>
-</tbody></table>
-<h4 id="测试PC之间的连通性。"><a href="#测试PC之间的连通性。" class="headerlink" title="测试PC之间的连通性。"></a>测试PC之间的连通性。</h4><p>下图为使用PC0 <code>ping</code>PC1和PC2,由下图可知，此时PC0与PC1和PC2是能进行通信的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171101047.png"></p>
-<h4 id="Vlan划分"><a href="#Vlan划分" class="headerlink" title="Vlan划分"></a>Vlan划分</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171105123.png"></p>
-<h4 id="配置交换机"><a href="#配置交换机" class="headerlink" title="配置交换机"></a>配置交换机</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span>   <span class="comment">#进入特权模式</span></span><br><span class="line">conf t   <span class="comment">#进入全局模式</span></span><br><span class="line">vlan 10  <span class="comment">#新建vlan 10</span></span><br><span class="line">name first <span class="comment">#命名为first</span></span><br><span class="line">vlan 20  <span class="comment">#新建vlan 20</span></span><br><span class="line">name second <span class="comment">#命名为second</span></span><br><span class="line">vlan 30  <span class="comment">#新建vlan 30</span></span><br><span class="line">name third  <span class="comment">#命名为third</span></span><br><span class="line"></span><br><span class="line">int f0/2  <span class="comment"># 接口设置</span></span><br><span class="line">switchport mode access <span class="comment"># 选择access模式</span></span><br><span class="line">switchport access vlan 10 <span class="comment"># 将该接口分配到vlan 10</span></span><br><span class="line">int f0/3</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 20</span><br><span class="line">int f0/4</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 30</span><br><span class="line">int f0/1</span><br><span class="line">switchport mode trunk  <span class="comment">#trunk模式</span></span><br></pre></td></tr></table></figure>
-
-<p>两个交换机的配置都是这样，具体有些接口不一样的地方自行修改接口名。</p>
-<p>在特权模式下使用<code>show vlan</code>查看Vlan</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171217388.png"></p>
-<p>上图为分别为三个交换机上的fa0&#x2F;2,fa0&#x2F;3,fa0&#x2F;4接口分配到first,second,third三个vlan上面。</p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171235211.png"></p>
-<p>由上图，PC1 ping不通PC2,PC1在VLAN1，PC2在VLAN2,不在同一VLNA中。PC1ping通PC4,PC1和PC2都在VLAN1内。</p>
-<h1 id="实验三到此结束"><a href="#实验三到此结束" class="headerlink" title="实验三到此结束"></a>实验三到此结束</h1>]]></content>
       <categories>
         <category>计算机网络</category>
         <category>局域网</category>
