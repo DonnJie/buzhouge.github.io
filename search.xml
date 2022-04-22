@@ -19,6 +19,7 @@
 <th>星期四</th>
 <th>星期五</th>
 <th>星期六</th>
+<th>星期日</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -26,7 +27,8 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td></td>
+<td>❌</td>
+<td>✔️</td>
 <td></td>
 <td></td>
 </tr>
@@ -35,7 +37,8 @@
 <td>⭕</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td></td>
+<td>✔️</td>
+<td>✔️</td>
 <td></td>
 <td></td>
 </tr>
@@ -44,6 +47,7 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
+<td>❌</td>
 <td></td>
 <td></td>
 <td></td>
@@ -53,6 +57,7 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
+<td>❌</td>
 <td></td>
 <td></td>
 <td></td>
@@ -62,6 +67,7 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
+<td>❌</td>
 <td></td>
 <td></td>
 <td></td>
@@ -71,6 +77,7 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
+<td>❌</td>
 <td></td>
 <td></td>
 <td></td>
@@ -80,6 +87,7 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
+<td>❌</td>
 <td></td>
 <td></td>
 <td></td>
@@ -97,6 +105,39 @@
       <tags>
         <tag>考研</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode数据结构数组</title>
+    <url>/2022/04/22/Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
+    <content><![CDATA[<h2 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26.删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26.删除有序数组中的重复项</a></h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
+<p>给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺&gt;序 应该保持 一致 。由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个素，那么 &gt;nums 的前 k 个元素应该保存最终结果。</p>
+<p>将最终结果插入 nums 的前 k 个位置后返回 k 。</p>
+<p>不要使用额外的空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+</blockquote>
+<p>判题标准</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = [...]; <span class="comment">// 输入数组</span></span><br><span class="line"><span class="type">int</span>[] expectedNums = [...]; <span class="comment">// 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> k = <span class="built_in">removeDuplicates</span>(nums); <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line">assert k == expectedNums.length;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    assert nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实例1：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span>, nums = [<span class="number">1</span>,<span class="number">2</span>,_]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">2</span> ，并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span> 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>实例2：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Leetcoe</category>
+        <category>数据结构</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Leetcode</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
