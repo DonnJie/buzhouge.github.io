@@ -5,9 +5,9 @@
     <url>/2022/04/20/%E7%94%9F%E6%B4%BB/%E5%91%A8%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="再贝"><a href="#再贝" class="headerlink" title="再贝"></a>再贝</h1><blockquote>
 <p>个人日程记录，每天更新，直到我不想更新了…</p>
+<p>还没更新…</p>
 </blockquote>
-<h2 id="2022-4-19"><a href="#2022-4-19" class="headerlink" title="2022-4-19"></a>2022-4-19</h2><blockquote>
-<p>从周四开始记录</p>
+<h2 id="2022-4"><a href="#2022-4" class="headerlink" title="2022-4"></a>2022-4</h2><blockquote>
 </blockquote>
 <table>
 <thead>
@@ -27,67 +27,151 @@
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
-<td>✔️</td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>单词-2</td>
 <td>⭕</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>✔️</td>
-<td>✔️</td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>数据结构</td>
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>Leetcode</td>
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>高数</td>
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>线性代数</td>
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
 </tr>
 <tr>
 <td>英语句子||作文</td>
 <td>⭕️</td>
 <td>⭕️</td>
 <td>⭕️</td>
-<td>❌</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>星期一</th>
+<th>星期二</th>
+<th>星期三</th>
+<th>星期四</th>
+<th>星期五</th>
+<th>星期六</th>
+<th>星期日</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单词-1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>单词-2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据结构</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Leetcode</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>高数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>线性代数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>英语句子||作文</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -177,6 +261,168 @@
 <h4 id="连通性测试"><a href="#连通性测试" class="headerlink" title="连通性测试"></a>连通性测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171917227.png"></p>
 <p>由上图可知，PC0与PC1和PC2是连通的，所以此事属于不同Vlan的PC0、PC1、PC2、通过三层交换机实现了通信。</p>
 <h1 id="实验五结束"><a href="#实验五结束" class="headerlink" title="实验五结束"></a>实验五结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
+      <tags>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cisco Packet Tracer实验————综合实验</title>
+    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————综合实验"><a href="#Cisco-Packet-Tracer实验————综合实验" class="headerlink" title="Cisco Packet Tracer实验————综合实验"></a>Cisco Packet Tracer实验————综合实验</h1><p>您好，我的博客是<a href="http://buzhouge.top/">不周阁</a></p>
+<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。</li>
+<li>训练面向网络工程的思维和动手能力。</li>
+</ul>
+<h3 id="主要配置命令"><a href="#主要配置命令" class="headerlink" title="主要配置命令"></a>主要配置命令</h3><h5 id="交换机配置命令"><a href="#交换机配置命令" class="headerlink" title="交换机配置命令"></a>交换机配置命令</h5><p><strong>vlan</strong> 参数  创建一个指定编号的vlan</p>
+<p><strong>name</strong> 参数 对当前的vlan命名（改名）</p>
+<p>interface 参数  进入指定接口配置模式</p>
+<p><strong>switchport mode access</strong> 将当前接口的VLAN管理模式，设置为接入模式</p>
+<p><strong>switchport access vlan</strong> 参数 将当前接口划分到指定的vlan中</p>
+<p><strong>switchport mode trunk</strong> 将当前接口的VLAN管理模式，设置为中继模式</p>
+<p><strong>switchport trunk nativie vlan</strong> 参数 设置当前接口的本征vlan属性（对中继接口有效）</p>
+<p>switchport trunk allowed vlan 参数 设置当前接口能中继的vlan列表(对中继接口有效）</p>
+<p><strong>interface vlan</strong> 参数 在指定的vlan上创建一个逻辑节点（接口），有两个身份，名字为VLAN加上的所在vlan的编号。 作为逻辑节点，它有自己的MAC地址、IP地址（需要设置），可以跟其它节点通信，通常用于网络管理；作为接口，用于内部配置，对于三层交换机可作为路由接口用。</p>
+<p><strong>Show vlan brief</strong>  以简表形式显示设备内所划分的vlan</p>
+<p><strong>Show interfaces</strong> 参数 switchport 显示指定接口的有关vlan方面的配置属性值</p>
+<p><strong>Show interfaces trunk</strong> 显示当前的设备中的中继接口</p>
+<h5 id="路由器子接口的创建、Vlan协议封装命令"><a href="#路由器子接口的创建、Vlan协议封装命令" class="headerlink" title="路由器子接口的创建、Vlan协议封装命令"></a>路由器子接口的创建、Vlan协议封装命令</h5><p><strong>interface</strong> 参数1.参数2 创建或进入指定路由器接口的某个子接口，参数1为某个物理接口的名称，参数2为子接口号</p>
+<p><strong>encapsulation dot1q</strong> 参数 指定当前子接口使用中继协议802.1q通信、指定该接口所属的vlan</p>
+<h5 id="基本配置命令"><a href="#基本配置命令" class="headerlink" title="基本配置命令"></a>基本配置命令</h5><p><strong>no</strong>  参数表 取消某操作命令，后面的参数为前面某次所执行过的命令行</p>
+<p><strong>configure terminal</strong> 进入终端配置模式</p>
+<p><strong>copy running-config startup-config</strong> 把内存中的配置文件保存到NVRAM 中</p>
+<p><strong>enable</strong> 进入特权模式</p>
+<p><strong>exit</strong> 由当前模式退出到上层模式</p>
+<p><strong>end</strong>  退出到特权模式</p>
+<p><strong>hostname</strong> 设置主机的名字</p>
+<p><strong>interface</strong> 参数  进入指定路由器接口配置模式</p>
+<p><strong>ip address</strong> 参数表  设置接口的ip地址</p>
+<p><strong>no shutdown</strong>  激活网络接口</p>
+<p><strong>show running-config</strong>  显示内存中的配置文件</p>
+<p><strong>show interfaces</strong> 参数 显示接口的信息</p>
+<p><strong>ip route</strong> 参数表   添加静态路由</p>
+<p><strong>show ip route</strong>  查看路由表</p>
+<p><strong>ping</strong>  参数   网络连通测试，参数为目标节点</p>
+<p><strong>traceroute</strong> 参数 路由跟踪测试（对于windows主机命令为tracert），参数为目标节点</p>
+<h4 id="设计任务"><a href="#设计任务" class="headerlink" title="设计任务"></a>设计任务</h4><p>为某培训机构规划设计一个网络,要求在网络层给出仿真设计。已知该机构工作场所为一个园区，有若干房间，主要用途有办公、机房、宿舍、教室，有若干电脑需要联网，需要访问因特网。目前机构内部人员（办公人员、教员）约有20人，给学员配置的主机数目约200台。</p>
+<h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>目标网络是局域网。采用Ethernet设备进行组网，出口设备采用传统的路由器，通过服务商连接INTERNET。内网全部用交换机作互联设备。需要划分三个VLAN用于隔离网管、办公、教学流量。鉴于目前的用户数、网络流量有限，部署一台核心交换机（三层交换机）即可。</p>
+<h4 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h4><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171830847.png"></p>
+<h4 id="主机端网络配置"><a href="#主机端网络配置" class="headerlink" title="主机端网络配置"></a>主机端网络配置</h4><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>网关地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lap0</td>
+<td>192.168.2.1</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>Lap1</td>
+<td>192.168.99.99</td>
+<td>255.255.255.0</td>
+<td>192.168.99.254</td>
+</tr>
+<tr>
+<td>Lap2</td>
+<td>192.168.2.3</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>192.168.3.2</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>192.168.3.4</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+</tbody></table>
+<h4 id="配置交换机S1"><a href="#配置交换机S1" class="headerlink" title="配置交换机S1"></a>配置交换机S1</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进去全局模式</span></span><br><span class="line">hostname S1 <span class="comment">#修改名字为 S1</span></span><br><span class="line">vlan 2  <span class="comment"># 创建 Vlan2</span></span><br><span class="line">int fa0/2 <span class="comment"># 进入局部设置模式，选择接口f0/2</span></span><br><span class="line">sw mode access  <span class="comment"># 选择管理方式</span></span><br><span class="line">sw access vlan 2 <span class="comment"># 给该接口划分vlan</span></span><br><span class="line">vlan 3</span><br><span class="line">int fa0/3</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 3</span><br><span class="line">vlan 99 </span><br><span class="line">int fa0/4</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 99</span><br><span class="line">int fa0/1</span><br><span class="line">sw mode trunk <span class="comment"># 选择管理方式</span></span><br><span class="line">sw trunk natitive vlan 99 <span class="comment"># 本征vlan</span></span><br><span class="line">sw trunk allowed vlan 2,3,99 <span class="comment"># 所属Vlan</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好查看交换机已配置的信息</p>
+<p>show run</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271650870.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271652131.png"></p>
+<p>查看分配的子网</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271651283.png"></p>
+<p>验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271938089.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271926527.png"></p>
+<p>在s0三层上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271932590.png"></p>
+<p>配置中继接口f0&#x2F;1和f0&#x2F;2,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271937553.png"></p>
+<p>接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271934265.png"></p>
+<p>接口f0&#x2F;2</p>
+<p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220427193930689.png" alt="image-20220427193930689"></p>
+<p>在S2上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271943284.png"></p>
+<p>配置中继接口f0&#x2F;1,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271944245.png"></p>
+<p>查看接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271945447.png"></p>
+<p>网管节点测试</p>
+<p>在S1上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable  # 进入特权模式</span><br><span class="line">conf t  # 进入全局模式</span><br><span class="line">int vlan 99 # 进入局部设置模式，选择vlan99</span><br><span class="line">ip address 192.168.99.1 255.255.255.0 # 分配IP地址</span><br><span class="line">no shutdown # 打开端口</span><br><span class="line">ip default-gateway 192.168.99.254 # 设置网关</span><br><span class="line">line vty 0 15  # 创建16个远程访问终端</span><br><span class="line">passwd 123456  # 设置远程访问密码</span><br><span class="line">privilege level 15 # 设置管理员</span><br><span class="line">transport input telnet # 设定远程登陆可以使用的协议</span><br><span class="line">login  # 远程登陆时，开启口令</span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956747.png"></p>
+<p>在S2上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable</span><br><span class="line">conf t</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">ip default-gateway 192.168.99.254</span><br><span class="line">line vty 0 2</span><br><span class="line">passwd abc</span><br><span class="line">privilege level 2</span><br><span class="line">transport input telnet</span><br><span class="line">login </span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956584.png"></p>
+<p>基于三层交换路由方案</p>
+<p>由核心交换机S0、出口路由器共同承担全网路由</p>
+<p>R1上设置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable # 进入特权模式</span><br><span class="line">conf t # 进入全局模式</span><br><span class="line">int f0/0  #  进入局部设置模式，选择端口f0/0</span><br><span class="line">ip address 192.168.4.2 255.255.255.252 # 分配IP地址</span><br><span class="line">ip routing 192.168.2.0 255.255.255.0 192.168.4.1 # 设置路由表</span><br><span class="line">ip routing 192.168.3.0 255.255.255.0 192.168.4.1</span><br><span class="line">ip routing 192.168.99.0 255.255.255.0 192.168.4.1</span><br></pre></td></tr></table></figure>
+
+<p>S0上的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable </span><br><span class="line">ocnf t </span><br><span class="line">int vlan 2</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 3</span><br><span class="line">ip address 192.168.3.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">vlan 4 # 创建vlan 4</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 4 </span><br><span class="line">int vlan 4</span><br><span class="line">ip address 192.168.4.1 255.255.255.252</span><br><span class="line">no switchport 	#关闭交换，开启路由</span><br><span class="line">ip routing 192.168.4.1 255.255.255.252</span><br></pre></td></tr></table></figure>
+
+<p>R1 路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023867.png"></p>
+<p>S0路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023068.png"></p>
+<p>使用vlan2 中的Lap0 分别ping vlan3中的PC1和vlan99中的Lap1</p>
+<p>Lap0 ping vlan3中的PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272026905.png"></p>
+<p>Lap0 ping vlan99中的Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272027646.png"></p>
+<p>PC1 ping Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029894.png"></p>
+<p>通过测试结果可知此时局域网内的各个vlan已处于连通的状态。</p>
+<p>改动网络拓扑，连接一个INTERNET接入服务商路由器，完成相应的仿真。</p>
+<p>该处分配网段为192.168.5.0</p>
+<p>改动后的拓扑图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029393.png"></p>
+<p>配置好之后使用PC2 ping 局域网内的主机测试连通性</p>
+<p>PC2 ping Lap0 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031126.png"></p>
+<p>PC2 ping PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031246.png"></p>
+<h1 id="未完善先上传"><a href="#未完善先上传" class="headerlink" title="未完善先上传"></a>未完善先上传</h1>]]></content>
       <categories>
         <category>计算机网络</category>
         <category>局域网</category>

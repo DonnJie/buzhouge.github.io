@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Cisco Packet Tracer实验————综合实验 | 不周阁</title><meta name="keywords" content="交换机,计算机网络,Cisco"><meta name="author" content="杰,sophon3@q63.com"><meta name="copyright" content="杰"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言 大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验  Cisco Packet Tracer实验————综合实验您好，我的博客是不周阁 实验目的 能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。 训练面向网络工程的思维和动手能力。  主要配置命令交换机配置命令vlan 参数  创建一个指定编号的vlan name 参数 对当前的vla">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cisco Packet Tracer实验————综合实验">
+<meta property="og:url" content="http://buzhouge.top/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/index.html">
+<meta property="og:site_name" content="不周阁">
+<meta property="og:description" content="前言 大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验  Cisco Packet Tracer实验————综合实验您好，我的博客是不周阁 实验目的 能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。 训练面向网络工程的思维和动手能力。  主要配置命令交换机配置命令vlan 参数  创建一个指定编号的vlan name 参数 对当前的vla">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png">
+<meta property="article:published_time" content="2022-04-17T09:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-27T12:41:48.546Z">
+<meta property="article:author" content="杰">
+<meta property="article:tag" content="交换机">
+<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="Cisco">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png"><link rel="shortcut icon" href="/img/sophon.jpg"><link rel="canonical" href="http://buzhouge.top/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Cisco Packet Tracer实验————综合实验',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-27 20:41:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/sophon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">不周阁</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Cisco Packet Tracer实验————综合实验</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-17T09:00:00.000Z" title="发表于 2022-04-17 17:00:00">2022-04-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-27T12:41:48.546Z" title="更新于 2022-04-27 20:41:48">2022-04-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/">局域网</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Cisco Packet Tracer实验————综合实验"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————综合实验"><a href="#Cisco-Packet-Tracer实验————综合实验" class="headerlink" title="Cisco Packet Tracer实验————综合实验"></a>Cisco Packet Tracer实验————综合实验</h1><p>您好，我的博客是<a href="http://buzhouge.top/">不周阁</a></p>
+<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。</li>
+<li>训练面向网络工程的思维和动手能力。</li>
+</ul>
+<h3 id="主要配置命令"><a href="#主要配置命令" class="headerlink" title="主要配置命令"></a>主要配置命令</h3><h5 id="交换机配置命令"><a href="#交换机配置命令" class="headerlink" title="交换机配置命令"></a>交换机配置命令</h5><p><strong>vlan</strong> 参数  创建一个指定编号的vlan</p>
+<p><strong>name</strong> 参数 对当前的vlan命名（改名）</p>
+<p>interface 参数  进入指定接口配置模式</p>
+<p><strong>switchport mode access</strong> 将当前接口的VLAN管理模式，设置为接入模式</p>
+<p><strong>switchport access vlan</strong> 参数 将当前接口划分到指定的vlan中</p>
+<p><strong>switchport mode trunk</strong> 将当前接口的VLAN管理模式，设置为中继模式</p>
+<p><strong>switchport trunk nativie vlan</strong> 参数 设置当前接口的本征vlan属性（对中继接口有效）</p>
+<p>switchport trunk allowed vlan 参数 设置当前接口能中继的vlan列表(对中继接口有效）</p>
+<p><strong>interface vlan</strong> 参数 在指定的vlan上创建一个逻辑节点（接口），有两个身份，名字为VLAN加上的所在vlan的编号。 作为逻辑节点，它有自己的MAC地址、IP地址（需要设置），可以跟其它节点通信，通常用于网络管理；作为接口，用于内部配置，对于三层交换机可作为路由接口用。</p>
+<p><strong>Show vlan brief</strong>  以简表形式显示设备内所划分的vlan</p>
+<p><strong>Show interfaces</strong> 参数 switchport 显示指定接口的有关vlan方面的配置属性值</p>
+<p><strong>Show interfaces trunk</strong> 显示当前的设备中的中继接口</p>
+<h5 id="路由器子接口的创建、Vlan协议封装命令"><a href="#路由器子接口的创建、Vlan协议封装命令" class="headerlink" title="路由器子接口的创建、Vlan协议封装命令"></a>路由器子接口的创建、Vlan协议封装命令</h5><p><strong>interface</strong> 参数1.参数2 创建或进入指定路由器接口的某个子接口，参数1为某个物理接口的名称，参数2为子接口号</p>
+<p><strong>encapsulation dot1q</strong> 参数 指定当前子接口使用中继协议802.1q通信、指定该接口所属的vlan</p>
+<h5 id="基本配置命令"><a href="#基本配置命令" class="headerlink" title="基本配置命令"></a>基本配置命令</h5><p><strong>no</strong>  参数表 取消某操作命令，后面的参数为前面某次所执行过的命令行</p>
+<p><strong>configure terminal</strong> 进入终端配置模式</p>
+<p><strong>copy running-config startup-config</strong> 把内存中的配置文件保存到NVRAM 中</p>
+<p><strong>enable</strong> 进入特权模式</p>
+<p><strong>exit</strong> 由当前模式退出到上层模式</p>
+<p><strong>end</strong>  退出到特权模式</p>
+<p><strong>hostname</strong> 设置主机的名字</p>
+<p><strong>interface</strong> 参数  进入指定路由器接口配置模式</p>
+<p><strong>ip address</strong> 参数表  设置接口的ip地址</p>
+<p><strong>no shutdown</strong>  激活网络接口</p>
+<p><strong>show running-config</strong>  显示内存中的配置文件</p>
+<p><strong>show interfaces</strong> 参数 显示接口的信息</p>
+<p><strong>ip route</strong> 参数表   添加静态路由</p>
+<p><strong>show ip route</strong>  查看路由表</p>
+<p><strong>ping</strong>  参数   网络连通测试，参数为目标节点</p>
+<p><strong>traceroute</strong> 参数 路由跟踪测试（对于windows主机命令为tracert），参数为目标节点</p>
+<h4 id="设计任务"><a href="#设计任务" class="headerlink" title="设计任务"></a>设计任务</h4><p>为某培训机构规划设计一个网络,要求在网络层给出仿真设计。已知该机构工作场所为一个园区，有若干房间，主要用途有办公、机房、宿舍、教室，有若干电脑需要联网，需要访问因特网。目前机构内部人员（办公人员、教员）约有20人，给学员配置的主机数目约200台。</p>
+<h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>目标网络是局域网。采用Ethernet设备进行组网，出口设备采用传统的路由器，通过服务商连接INTERNET。内网全部用交换机作互联设备。需要划分三个VLAN用于隔离网管、办公、教学流量。鉴于目前的用户数、网络流量有限，部署一台核心交换机（三层交换机）即可。</p>
+<h4 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h4><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171830847.png"></p>
+<h4 id="主机端网络配置"><a href="#主机端网络配置" class="headerlink" title="主机端网络配置"></a>主机端网络配置</h4><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>网关地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lap0</td>
+<td>192.168.2.1</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>Lap1</td>
+<td>192.168.99.99</td>
+<td>255.255.255.0</td>
+<td>192.168.99.254</td>
+</tr>
+<tr>
+<td>Lap2</td>
+<td>192.168.2.3</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>192.168.3.2</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>192.168.3.4</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+</tbody></table>
+<h4 id="配置交换机S1"><a href="#配置交换机S1" class="headerlink" title="配置交换机S1"></a>配置交换机S1</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进去全局模式</span></span><br><span class="line">hostname S1 <span class="comment">#修改名字为 S1</span></span><br><span class="line">vlan 2  <span class="comment"># 创建 Vlan2</span></span><br><span class="line">int fa0/2 <span class="comment"># 进入局部设置模式，选择接口f0/2</span></span><br><span class="line">sw mode access  <span class="comment"># 选择管理方式</span></span><br><span class="line">sw access vlan 2 <span class="comment"># 给该接口划分vlan</span></span><br><span class="line">vlan 3</span><br><span class="line">int fa0/3</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 3</span><br><span class="line">vlan 99 </span><br><span class="line">int fa0/4</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 99</span><br><span class="line">int fa0/1</span><br><span class="line">sw mode trunk <span class="comment"># 选择管理方式</span></span><br><span class="line">sw trunk natitive vlan 99 <span class="comment"># 本征vlan</span></span><br><span class="line">sw trunk allowed vlan 2,3,99 <span class="comment"># 所属Vlan</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好查看交换机已配置的信息</p>
+<p>show run</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271650870.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271652131.png"></p>
+<p>查看分配的子网</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271651283.png"></p>
+<p>验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271938089.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271926527.png"></p>
+<p>在s0三层上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271932590.png"></p>
+<p>配置中继接口f0&#x2F;1和f0&#x2F;2,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271937553.png"></p>
+<p>接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271934265.png"></p>
+<p>接口f0&#x2F;2</p>
+<p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220427193930689.png" alt="image-20220427193930689"></p>
+<p>在S2上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271943284.png"></p>
+<p>配置中继接口f0&#x2F;1,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271944245.png"></p>
+<p>查看接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271945447.png"></p>
+<p>网管节点测试</p>
+<p>在S1上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">enable  # 进入特权模式</span><br><span class="line">conf t  # 进入全局模式</span><br><span class="line">int vlan 99 # 进入局部设置模式，选择vlan99</span><br><span class="line">ip address 192.168.99.1 255.255.255.0 # 分配IP地址</span><br><span class="line">no shutdown # 打开端口</span><br><span class="line">ip default-gateway 192.168.99.254 # 设置网关</span><br><span class="line">line vty 0 15  # 创建16个远程访问终端</span><br><span class="line">passwd 123456  # 设置远程访问密码</span><br><span class="line">privilege level 15 # 设置管理员</span><br><span class="line">transport input telnet # 设定远程登陆可以使用的协议</span><br><span class="line">login  # 远程登陆时，开启口令</span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956747.png"></p>
+<p>在S2上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">enable</span><br><span class="line">conf t</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">ip default-gateway 192.168.99.254</span><br><span class="line">line vty 0 2</span><br><span class="line">passwd abc</span><br><span class="line">privilege level 2</span><br><span class="line">transport input telnet</span><br><span class="line">login </span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956584.png"></p>
+<p>基于三层交换路由方案</p>
+<p>由核心交换机S0、出口路由器共同承担全网路由</p>
+<p>R1上设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enable # 进入特权模式</span><br><span class="line">conf t # 进入全局模式</span><br><span class="line">int f0/0  #  进入局部设置模式，选择端口f0/0</span><br><span class="line">ip address 192.168.4.2 255.255.255.252 # 分配IP地址</span><br><span class="line">ip routing 192.168.2.0 255.255.255.0 192.168.4.1 # 设置路由表</span><br><span class="line">ip routing 192.168.3.0 255.255.255.0 192.168.4.1</span><br><span class="line">ip routing 192.168.99.0 255.255.255.0 192.168.4.1</span><br></pre></td></tr></table></figure>
+
+<p>S0上的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">enable </span><br><span class="line">ocnf t </span><br><span class="line">int vlan 2</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 3</span><br><span class="line">ip address 192.168.3.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">vlan 4 # 创建vlan 4</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 4 </span><br><span class="line">int vlan 4</span><br><span class="line">ip address 192.168.4.1 255.255.255.252</span><br><span class="line">no switchport 	#关闭交换，开启路由</span><br><span class="line">ip routing 192.168.4.1 255.255.255.252</span><br></pre></td></tr></table></figure>
+
+<p>R1 路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023867.png"></p>
+<p>S0路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023068.png"></p>
+<p>使用vlan2 中的Lap0 分别ping vlan3中的PC1和vlan99中的Lap1</p>
+<p>Lap0 ping vlan3中的PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272026905.png"></p>
+<p>Lap0 ping vlan99中的Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272027646.png"></p>
+<p>PC1 ping Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029894.png"></p>
+<p>通过测试结果可知此时局域网内的各个vlan已处于连通的状态。</p>
+<p>改动网络拓扑，连接一个INTERNET接入服务商路由器，完成相应的仿真。</p>
+<p>该处分配网段为192.168.5.0</p>
+<p>改动后的拓扑图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029393.png"></p>
+<p>配置好之后使用PC2 ping 局域网内的主机测试连通性</p>
+<p>PC2 ping Lap0 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031126.png"></p>
+<p>PC2 ping PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031246.png"></p>
+<h1 id="未完善先上传"><a href="#未完善先上传" class="headerlink" title="未完善先上传"></a>未完善先上传</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:sophon3@q63.com">杰</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://buzhouge.top/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/">http://buzhouge.top/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://buzhouge.top" target="_blank">不周阁</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/">交换机</a><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><a class="post-meta__tags" href="/tags/Cisco/">Cisco</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Cisco Packet Tracer实验————多层交换机技术</div></div></a></div><div class="next-post pull-right"><a href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171548352.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Cisco Packet Tracer实验————静态路由与动态路由</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/" title="Cisco Packet Tracer实验————多层交换机技术"><img class="cover" src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-17</div><div class="title">Cisco Packet Tracer实验————多层交换机技术</div></div></a></div><div><a href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/" title="Cisco Packet Tracer实验————静态路由与动态路由"><img class="cover" src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171548352.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-17</div><div class="title">Cisco Packet Tracer实验————静态路由与动态路由</div></div></a></div><div><a href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%B8%89/" title="Cisco Packet Tracer实验————组建虚拟局域网"><img class="cover" src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171053647.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-17</div><div class="title">Cisco Packet Tracer实验————组建虚拟局域网</div></div></a></div><div><a href="/2022/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%8C/" title="Cisco Packet Tracer 实验————配置交换机"><img class="cover" src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152233907.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-15</div><div class="title">Cisco Packet Tracer 实验————配置交换机</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/sophon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">杰</div><div class="author-info__description">记录个人学习和生活</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="http://www.github.com/sophon3"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="http://buzhouge.top" target="_blank" title="主站"><i class="fa-brands fa-battle-net"></i></a><a class="social-icon" href="http://159.75.86.14/" target="_blank" title="能加速哦^_^"><i class="fa-regular fa-face-smile-wink"></i></a><a class="social-icon" href="http://git.buzhouge.top" target="_blank" title="Github^.^"><i class="fa-brands fa-github-alt"></i></a><a class="social-icon" href="https://github.com/sophon3" target="_blank" title="Github账号"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">不周阁，一个分享学习的地方</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cisco-Packet-Tracer%E5%AE%9E%E9%AA%8C%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C"><span class="toc-number"></span> <span class="toc-text">Cisco Packet Tracer实验————综合实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">0.1.</span> <span class="toc-text">实验目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-number">0.2.</span> <span class="toc-text">主要配置命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-number">0.2.0.1.</span> <span class="toc-text">交换机配置命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8%E5%AD%90%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81Vlan%E5%8D%8F%E8%AE%AE%E5%B0%81%E8%A3%85%E5%91%BD%E4%BB%A4"><span class="toc-number">0.2.0.2.</span> <span class="toc-text">路由器子接口的创建、Vlan协议封装命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-number">0.2.0.3.</span> <span class="toc-text">基本配置命令</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1"><span class="toc-number">0.2.1.</span> <span class="toc-text">设计任务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="toc-number">0.2.2.</span> <span class="toc-text">需求分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E8%AE%A1"><span class="toc-number">0.2.3.</span> <span class="toc-text">网络设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE"><span class="toc-number">0.2.4.</span> <span class="toc-text">网络拓扑图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E6%9C%BA%E7%AB%AF%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-number">0.2.5.</span> <span class="toc-text">主机端网络配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%BA%A4%E6%8D%A2%E6%9C%BAS1"><span class="toc-number">0.2.6.</span> <span class="toc-text">配置交换机S1</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E5%AE%8C%E5%96%84%E5%85%88%E4%B8%8A%E4%BC%A0"><span class="toc-number"></span> <span class="toc-text">未完善先上传</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/22/Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" title="Leetcode数据结构数组"><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204221443233.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode数据结构数组"/></a><div class="content"><a class="title" href="/2022/04/22/Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" title="Leetcode数据结构数组">Leetcode数据结构数组</a><time datetime="2022-04-22T06:37:03.955Z" title="发表于 2022-04-22 14:37:03">2022-04-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/20/%E7%94%9F%E6%B4%BB/%E5%91%A8%E8%AE%B0/" title="个人周记"><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204201818564.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人周记"/></a><div class="content"><a class="title" href="/2022/04/20/%E7%94%9F%E6%B4%BB/%E5%91%A8%E8%AE%B0/" title="个人周记">个人周记</a><time datetime="2022-04-20T08:00:00.000Z" title="发表于 2022-04-20 16:00:00">2022-04-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/" title="Cisco Packet Tracer实验————多层交换机技术"><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cisco Packet Tracer实验————多层交换机技术"/></a><div class="content"><a class="title" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/" title="Cisco Packet Tracer实验————多层交换机技术">Cisco Packet Tracer实验————多层交换机技术</a><time datetime="2022-04-17T09:00:00.000Z" title="发表于 2022-04-17 17:00:00">2022-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/" title="Cisco Packet Tracer实验————综合实验"><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171637902.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cisco Packet Tracer实验————综合实验"/></a><div class="content"><a class="title" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/" title="Cisco Packet Tracer实验————综合实验">Cisco Packet Tracer实验————综合实验</a><time datetime="2022-04-17T09:00:00.000Z" title="发表于 2022-04-17 17:00:00">2022-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/" title="Cisco Packet Tracer实验————静态路由与动态路由"><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171548352.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cisco Packet Tracer实验————静态路由与动态路由"/></a><div class="content"><a class="title" href="/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/" title="Cisco Packet Tracer实验————静态路由与动态路由">Cisco Packet Tracer实验————静态路由与动态路由</a><time datetime="2022-04-17T08:00:00.000Z" title="发表于 2022-04-17 16:00:00">2022-04-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: ture"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 杰</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
