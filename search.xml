@@ -1,658 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>个人周记</title>
-    <url>/2022/04/20/%E7%94%9F%E6%B4%BB/%E5%91%A8%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="你好，再贝"><a href="#你好，再贝" class="headerlink" title="你好，再贝"></a>你好，再贝</h1><blockquote>
-<p>个人日程记录，每天更新，直到我不想更新了…</p>
-<p>想写什么写什么</p>
-<p>树洞？</p>
+    <title>Hello World</title>
+    <url>/2022/04/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.![](​<a href="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/20220409101">https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/20220409101</a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hello world</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客搭建部署到GitHub&amp;&amp;云服务器&amp;&amp;绑定域名</title>
+    <url>/2022/04/09/Hexo+github&amp;&amp;%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>这里我将介绍如何从零使用hexo搭建一个个人博客，并且将其部署到GitHub上或者服务器上，并且将自己的域名与GitHub或者服务器绑定，实现通过域名访问自己的博客。这个期间我踩了很多坑，所以我会尽量讲的清楚，不留坑。</p>
 </blockquote>
-<h2 id="2022-11"><a href="#2022-11" class="headerlink" title="2022-11"></a>2022-11</h2><blockquote>
-<p>Don’t care about foever only care about once owned!</p>
-<p>Enjoy your life story!</p>
-</blockquote>
-<h2 id="2022-8"><a href="#2022-8" class="headerlink" title="2022-8"></a>2022-8</h2><blockquote>
-<p>人生的光荣，不在永不失败，而在于能够屡败屡战。——8.17</p>
-<p>时光匆匆，逝去的时光无法找回，唯有珍惜当下。 ——8.11</p>
-<p>Nothing can compenstate for the loss of time！——8.8</p>
-</blockquote>
-<blockquote>
-<p>I am back !</p>
-</blockquote>
-<h2 id="2022-7"><a href="#2022-7" class="headerlink" title="2022-7"></a>2022-7</h2><h4 id="7-6"><a href="#7-6" class="headerlink" title="7-6"></a>7-6</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">不出去看看吗，一定会出去的！</span><br><span class="line">这里太小了。</span><br></pre></td></tr></table></figure>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>如果你好奇node.js是什么可以看这里<a href="https://www.sitepoint.com/node-js-is-the-new-black/">Node.js</a></p>
+<h3 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h3><ul>
+<li>这里我使用NVM来安装node.js，并且我也推荐使用这种方法来安装，nvm可以帮助你管理多个不同版本的node.js。因为你可能在不同的项目里需要到不同版本的node.js。</li>
+</ul>
+<ol>
+<li>下载NVM,可以直接前往<a href="https://github.com/coreybutler/nvm-windows/releases">GitHub</a>下载,选择nvm-setup.zip下载就行，之后直接解压按照默认方式安装就好。</li>
+</ol>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092304064.png"></p>
+<ol start="2">
+<li>进入命令行窗口输入 <code> nvm -v</code>查看是否安装成功，这里需要使用管理员权限打开CMD,后面的过程会用到管理员权限。下图为成功截图。</li>
+</ol>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092315834.png"></p>
+<ol start="3">
+<li>下载node.js</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm install node.jsb版本</span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line">nvm install 16.10.0</span><br></pre></td></tr></table></figure>
 
+<p>如果出现下载速度较慢的情况下可以为nvm添加淘宝源,找到nvm的安装路径，打开setting.txt文件（默认路径 C:\Users\用户名\AppData\Roaming\nvm）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node_mirror: https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092329312.png"></p>
+<ol start="4">
+<li>查看已经安装好的node.js版本，并选择node.js版本</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看版本：</span></span><br><span class="line">nvm list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择版本：</span></span><br><span class="line">nvm node.js版本</span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line">nvm 16.10.0</span><br></pre></td></tr></table></figure>
 
-<h4 id="7-4"><a href="#7-4" class="headerlink" title="7-4"></a>7-4</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I will join huawei!</span><br><span class="line">stronger,fuller!</span><br></pre></td></tr></table></figure>
+<p>这里选择node.js版本需要管理员权限，如果出现乱码情况就是没有管理员权限，没有选择成功。想确定是否选择成功可以再次输入 <code>node list</code>查看，成功的清空下，版本后会有一段话，如（Currently using 64-bit executable）。</p>
+<ol start="5">
+<li>查看Node.js和npm版本</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092335688.png"></p>
+<p>此时就已经安装好Node.js了。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>直接去<a href="https://git-scm.com/">Git</a>官网下载就行,全部默认安装就行。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>具体问题可以去<a href="https://hexo.io/zh-cn/">Hexo</a>官网看</p>
+<ol>
+<li>全局安装Hexo,这里建议管理员启动CMD，不然后面可能会报错，也不要用powershell，这个也会报错，原因我暂时未知。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
+<ol start="2">
+<li>查看hexo是否安装成功</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">follow your heart！</span><br></pre></td></tr></table></figure>
+<p>如果出现问题可以尝试将此路径 C:\Users\用户名\AppData\Roaming\nvm\v16.10.0 添加到系统的环境变量中。（这里包含hexo.cmd文件）</p>
+<ol start="3">
+<li>创建Hexo本地博客，新建一个blog文件夹，在这个文件夹内打开CMD</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建：</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 本地运行</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204100931780.png"></p>
+<p>此时表示本地已经安装好hexo。</p>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
+<li><p>首先你需要有一个<a href="https://github.com/">Github</a>账号，直接去<a href="https://github.com/">Github</a>官网注册就行。</p>
+</li>
+<li><p>创建一个仓库（repository），第一次尽量以<code>用户名.github.io</code>,当然你可以使用其他合理的名字，不过可能会出现问题。</p>
+</li>
+</ol>
+<p>   选择public和 <code>add a README file</code>即可</p>
+<ol start="3">
+<li>在Blog文件夹打开CMD，安装一个插件（部署到远程必要的插件）。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
+<ol start="4">
+<li>打开Blog文件夹下的_config.yml(配置文件),修改最后的deploy:</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/sophon123/helloword.github.io.git</span>  <span class="comment">#你的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span>  <span class="comment">#选择的仓库分支</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"># 好像一直知道自己想要什么，却一直受到干扰，一直不能坚持。</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>将hexo部署到GitHub</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment"># 清楚缓存</span></span><br><span class="line">hexo g <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">hexo d <span class="comment"># 将生成的网站静态文件部署到设定的远程仓库</span></span><br></pre></td></tr></table></figure>
 
+<p>如果出现如下报错，是由于你这台电脑第一次使用git。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204100952793.png"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入以下内容</span></span><br><span class="line">git config --git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line"><span class="comment"># 例如</span></span><br><span class="line">git config --global user.email xxxxxx@163.com </span><br><span class="line">git config --global user.name sophon3</span><br></pre></td></tr></table></figure>
 
+<p>设置完成后再输入<code>hexo d</code>重新上传，如果出现下图可以直接登陆上传，不过更加推荐给GitHub添加你电脑的rsa密钥，这样以后上传就不再需要登陆。即使你配置了rsa登陆，这里也需要你先登陆一次。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101031229.png"></p>
+<ol start="6">
+<li>将rsa添加到github</li>
+</ol>
+<p>在CMD窗口输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
 
-<h2 id="2022-6"><a href="#2022-6" class="headerlink" title="2022-6"></a>2022-6</h2><blockquote>
-<p>香农定理为什么说比特改变了世界？</p>
-<p>——2022&#x2F;5&#x2F;11                                             </p>
-</blockquote>
-<h2 id="2022-5"><a href="#2022-5" class="headerlink" title="2022-5"></a>2022-5</h2><blockquote>
-<p>智者，不与愚者争辩</p>
-<p>——2022&#x2F;5&#x2F;11</p>
-</blockquote>
-<h3 id="第一周-❌-❗️-⭕️-💯-✔️-🔗"><a href="#第一周-❌-❗️-⭕️-💯-✔️-🔗" class="headerlink" title="第一周                                                        ❌  ❗️  ⭕️  💯 ✔️ 🔗"></a>第一周                                                        ❌  ❗️  ⭕️  💯 ✔️ 🔗</h3><table>
-<thead>
-<tr>
-<th>事件</th>
-<th>星期一</th>
-<th>星期二</th>
-<th>星期三</th>
-<th>星期四</th>
-<th>星期五</th>
-<th>星期六</th>
-<th>星期日</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单词-1</td>
-<td>✔️</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>单词-2</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>数据结构</td>
-<td>✔️</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Leetcode</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>高数</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>线性代数</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>英语句子||作文</td>
-<td>❌</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>本周重点：复习密码学</p>
-</blockquote>
-<blockquote>
-<p>路要一步一步的走，题要一道一道的做，代码要一行一行的敲，没有捷径。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030855066.png"></p>
-</blockquote>
-<blockquote>
-<p>五一的学校</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030852046.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030854498.png"></p>
-</blockquote>
-<h2 id="四月"><a href="#四月" class="headerlink" title="四月"></a>四月</h2><blockquote>
-<p>人总会怀念以前</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204281146257.png"></p>
-<p>2022&#x2F;4&#x2F;8</p>
-</blockquote>
-<blockquote>
-<p><a href="https://www.chelseafc.com/">Chelsea</a> 铁血！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204281153261.png"></p>
-</blockquote>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><table>
-<thead>
-<tr>
-<th>事件</th>
-<th>星期一</th>
-<th>星期二</th>
-<th>星期三</th>
-<th>星期四</th>
-<th>星期五</th>
-<th>星期六</th>
-<th>星期日</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单词-1</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>单词-2</td>
-<td>⭕</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>数据结构</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>Leetcode</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>高数</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>线性代数</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-<tr>
-<td>英语句子||作文</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-<td>⭕️</td>
-</tr>
-</tbody></table>
+<p>直接回车就行，全部选择默认</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101040194.png"></p>
+<p>密钥生成成功，打开文件夹 <code>C:\Users\Sophon\.ssh</code>下的<code>id_rsa.pub</code>文件，里面就是本机的rsa密钥。打开你的GitHub，点击你的头像，依次选择setting -&gt; SSH and GPG keys -&gt; New SSH key ,</p>
+<p>将你电脑的rsa密钥添加到GitHub上。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101047513.png"></p>
+<p>再次使用<code>hexo d</code>上传，这时候你就能通过<code>https://username.github.io/仓库名</code>访问了。这时候部署到GitHub端基本完成了。如果你的仓库名是用户名则不需要加仓库名。如果出现无法渲染的情况，请打开blog文件夹下的_config.yml文件，按照其要求修改url,即改为<code>https://username.github.io/仓库</code></p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101155960.png"></p>
+<h2 id="部署到云服务器（Ubuntu20系统）"><a href="#部署到云服务器（Ubuntu20系统）" class="headerlink" title="部署到云服务器（Ubuntu20系统）"></a>部署到云服务器（Ubuntu20系统）</h2><ul>
+<li>该部分内容有参考此博客<a href="https://mrxiuxing.com/posts/d3b909a4.html">将Hexo博客部署至腾讯云服务器(Ubuntu18.04)</a></li>
+</ul>
+<ol>
+<li><a href="##%E5%AE%89%E8%A3%85Node.js">hexo本地部署</a>与上方一致直接进入服务器部署，什么厂家的服务器都一样，我这里使用的系统为ubuntu20.04。</li>
+<li>安装git和nginx,Ubuntu20好像默认已经安装有git</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git nginx -y</span><br></pre></td></tr></table></figure>
+
+<p>测试是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101241595.png"></p>
+<p>测试nginx是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start nginx.service    <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
+
+<p>去浏览器输入服务器的公网ip,看见如下图类似的画面则已经安装成功</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101242373.png"></p>
+<ol start="3">
+<li>创建一个git用户</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo adduser git  <span class="comment"># 创建git用户</span></span><br><span class="line">sudo passwd 12345 <span class="comment"># 设置git用户的密码</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 740 /etc/sudoers   <span class="comment">#(该文件为只读，想要增加内容必须增加权限)</span></span><br></pre></td></tr></table></figure>
+
+<p>给git用户权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/sudoeres</span><br><span class="line"><span class="comment"># 如果没有成功进去可以先进入/etc目录</span></span><br><span class="line"><span class="built_in">cd</span> /etc</span><br><span class="line">sudo vim /etc/sudoeres</span><br></pre></td></tr></table></figure>
+
+<p>找到 <code>root    ALL=(ALL:ALL) ALL</code>在其下面添加 <code>git     ALL=(ALL;ALL) ALL</code>,如下图 。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101218177.png"></p>
+<p>保存退出后将权限修改回来。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>将你主机的rsa与云服务器绑定。怎么得到本机rsa与上方配置GitHub的方法一样。</li>
+</ol>
+<p>切换到git用户，创建一个<code>.ssh</code>文件夹，在中这个文件夹下面创建一个<code>authorized_keys</code>，这个文件没有后缀。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+<p>将你的主机<code>C:\Users\Sophon\.ssh</code>下的<code>id_rsa.pub</code>的内容复制到 authorized_keys下面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证是否绑定成功</span></span><br><span class="line">ssh git@服务器公网ip</span><br></pre></td></tr></table></figure>
+
+<p>如果不需要密码就能登陆上你的服务器，证明已经绑定成功。</p>
+<p>修改这里的权限</p>
+<ol start="5">
+<li>建立网站根目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su root  <span class="comment"># 切换到root用户</span></span><br><span class="line"><span class="built_in">mkdir</span> /home/hexo  <span class="comment"># 作为网站根目录</span></span><br><span class="line"><span class="built_in">chown</span> git:git -R /home/hexo</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>配置Nginx</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default    <span class="comment"># 编辑配置</span></span><br></pre></td></tr></table></figure>
+
+<p>内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80 default_server;</span><br><span class="line">    listen       [::]:80 default_server;</span><br><span class="line">    #server_name  www.yours_server_name.com;    # 修改为自己的域名</span><br><span class="line">    root         /home/hexo;    # 修改为网站的根目录</span><br><span class="line">    index index.html index.php index.htm;</span><br><span class="line">    #Load configuration files for the default server block.</span><br><span class="line">    include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 404 /404.html;</span><br><span class="line">        location = /40x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 500 502 503 504 /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用nginx -t命令检查配置文件的语法是否出错。然后使用systemctl restart nginx.service systemctl命令重启服务即可。</p>
+<ol start="7">
+<li>建立git库</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su root</span><br><span class="line"><span class="built_in">cd</span> /home/git   <span class="comment"># 在 git 用户目录下创建</span></span><br><span class="line">git init --bare blog.git   <span class="comment"># 一定要加上--bare</span></span><br><span class="line"><span class="built_in">chown</span> git:git -R blog.git   <span class="comment">#赋予git用户权限</span></span><br></pre></td></tr></table></figure>
+
+<p>这里使用的是<code>post-receive</code>这个钩子，当git有收发的时候就会调用这个钩子。 在<code>blog.git</code>裸库的 <code>hooks</code>文件夹中，新建<code>post-receive</code>文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<p>填入以下内容，其中 &#x2F;home&#x2F;hexo 为网站目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f</span><br></pre></td></tr></table></figure>
+
+<p>添加权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>本地配置</li>
+</ol>
+<p>找到你主机的blog文件夹，打开_config.yml文件，在最后配置deploy。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101257198.png"></p>
+<p>如果你需要部署到一个地方，只需要添加一个链接即可。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 例如</span></span><br><span class="line">tencent_cloud: git@公网ip:/home/git/blog.git</span><br></pre></td></tr></table></figure>
+
+<p>这里就已经部署完成了，先<code>hexo clean</code>清理一下缓存，就可以<code>hexo g; hexo d</code>部署了</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><ul>
+<li>首先你需要有一个域名，正常到腾讯云或者阿里云购买一个就行了。</li>
+<li>购买之后到域名解析处，在购买域名的厂商那里找，每个厂商会有些不同。</li>
+</ul>
+<img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101306184.png" style="zoom:80%;" />
+
+<p>腾讯云的界面如上，点击你蓝色的域名就能进入管理。</p>
+<h3 id="GitHub-Page绑定域名"><a href="#GitHub-Page绑定域名" class="headerlink" title="GitHub Page绑定域名"></a>GitHub Page绑定域名</h3><p>添加一条解析记录，具体你可以看看页面给的帮助文档</p>
+<p>例如：</p>
 <table>
 <thead>
 <tr>
-<th>事件</th>
-<th>星期一</th>
-<th>星期二</th>
-<th>星期三</th>
-<th>星期四</th>
-<th>星期五</th>
-<th>星期六</th>
-<th>星期日</th>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>单词-1</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>单词-2</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>数据结构</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Leetcode</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>高数</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>线性代数</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>英语句子||作文</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>www</td>
+<td>CNAME</td>
+<td>username.github.io</td>
 </tr>
 </tbody></table>
-<h3 id="一些图标"><a href="#一些图标" class="headerlink" title="一些图标"></a>一些图标</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">❌  ❗️  ⭕️  💯 ✔️ 🔗 </span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>考研</category>
-        <category>安排</category>
-      </categories>
-      <tags>
-        <tag>考研</tag>
-        <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chelsea History</title>
-    <url>/2022/07/07/%E8%B6%B3%E7%90%83/%E5%88%87%E5%B0%94%E8%A5%BF/Chelsea%20History/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>足球</category>
-        <category>Chelsea History</category>
-      </categories>
-      <tags>
-        <tag>足球</tag>
-        <tag>切尔西</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>铁血蓝军，切尔西！</title>
-    <url>/2022/04/28/%E8%B6%B3%E7%90%83/%E5%88%87%E5%B0%94%E8%A5%BF/%E5%88%87%E5%B0%94%E8%A5%BF/</url>
-    <content><![CDATA[<h1 id="切尔西！"><a href="#切尔西！" class="headerlink" title="切尔西！"></a>切尔西！</h1><blockquote>
-<p>Mount!</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071033796.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071034135.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071037834.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071000854.png"></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>足球</category>
-        <category>切尔西</category>
-      </categories>
-      <tags>
-        <tag>足球</tag>
-        <tag>切尔西</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Leetcode数据结构数组</title>
-    <url>/2022/04/22/Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
-    <content><![CDATA[<h2 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26.删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26.删除有序数组中的重复项</a></h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
-<p>给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺&gt;序 应该保持 一致 。由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个素，那么 &gt;nums 的前 k 个元素应该保存最终结果。</p>
-<p>将最终结果插入 nums 的前 k 个位置后返回 k 。</p>
-<p>不要使用额外的空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
-</blockquote>
-<p>判题标准</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = [...]; <span class="comment">// 输入数组</span></span><br><span class="line"><span class="type">int</span>[] expectedNums = [...]; <span class="comment">// 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> k = <span class="built_in">removeDuplicates</span>(nums); <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line">assert k == expectedNums.length;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    assert nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>实例1：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span>, nums = [<span class="number">1</span>,<span class="number">2</span>,_]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">2</span> ，并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span> 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
-
-
-
-<p>实例2：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Leetcoe</category>
-        <category>数据结构</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>Leetcode</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cisco Packet Tracer实验————多层交换机技术</title>
-    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为多层交换技术</p>
-</blockquote>
-<h1 id="Cisco-Packet-Tracer实验————多层交换技术"><a href="#Cisco-Packet-Tracer实验————多层交换技术" class="headerlink" title="Cisco Packet Tracer实验————多层交换技术"></a>Cisco Packet Tracer实验————多层交换技术</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
-<li>理解三层交换原理。</li>
-<li>掌握三层交换机基本配置。</li>
-<li>掌握三层交换机VLAN间转发配置。</li>
-</ul>
-<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><blockquote>
-<p>三层交换机就是具有部分路由器功能的交换机，既可以工作在OSI网络标准模型的第三层（网络层）也可以工作在二层:(数据链路层)。三层交换机的最重要目的是加快大型局域网内部的数据交换，所具有的路由功能也是为这目的服务的，能够做到一次路由，多次转发。<br>   对于数据包转发等规律性的过程硬件高速实现，而像路由信息更新、路由表维护、路由计算、路由确定等功能，由软件实现。</p>
-</blockquote>
-<p><strong>重点：</strong> <strong>一次路由，多次转发</strong></p>
-<h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171646650.png"></p>
-<h5 id="二层交换机配置"><a href="#二层交换机配置" class="headerlink" title="二层交换机配置"></a>二层交换机配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 配置二层交换机S0</span></span><br><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">vlan 10 <span class="comment"># 新建vlan 10</span></span><br><span class="line">vlan 20 <span class="comment"># 新建vlan 20 </span></span><br><span class="line">int f0/1 <span class="comment"># 进入局部模式，选择端口f0/1</span></span><br><span class="line">sw mode access <span class="comment"># 设置模式为access </span></span><br><span class="line">sw access vlan 10 <span class="comment"># 将该接口分配至 Vlan 10</span></span><br><span class="line">int f0/2 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 20</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode trunk <span class="comment"># 设置接口f0/3为 trunk模式</span></span><br></pre></td></tr></table></figure>
-<p>查看二层交换机配置情况</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171656786.png"></p>
-<h5 id="路由器配置"><a href="#路由器配置" class="headerlink" title="路由器配置"></a>路由器配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 进入局部模式，选择端口G0/0 </span></span><br><span class="line">ip address 192.168.30.1 255.255.255.0  <span class="comment"># 为端口G0/0分配IP地址</span></span><br><span class="line">no shutdown <span class="comment">#开启端口</span></span><br><span class="line">int G0/1</span><br><span class="line">ip address 192.168.40.1 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="built_in">exit</span> <span class="comment">#回到上一层模式</span></span><br><span class="line">ip route 192.168.10.0 255.255.255.0 192.168.30.2 <span class="comment">#设置路由表，路由到192.168.10.0网段的下一跳是192.168.30.2</span></span><br><span class="line">ip route 192.168.20.0 255.255.255.0 192.168.30.2</span><br></pre></td></tr></table></figure>
-
-<p>路由器路由表信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171705360.png"></p>
-<p>路由器各个端口信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171705781.png"></p>
-<h5 id="三层交换机配置"><a href="#三层交换机配置" class="headerlink" title="三层交换机配置"></a>三层交换机配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">vlan 10 <span class="comment"># 新建vlan 10</span></span><br><span class="line">vlan 20 <span class="comment"># 新建vlan 20</span></span><br><span class="line">int f0/1 <span class="comment"># 进入局部模式，选择端口f0/1</span></span><br><span class="line">sw mode trunk <span class="comment">#选择 trunk模式</span></span><br><span class="line">sw trunk encapsulation dotlq <span class="comment">#设置端口封装协议为 dotlq</span></span><br><span class="line">int vlan 10 <span class="comment">#选择vlan 10</span></span><br><span class="line">ip address 192.168.10.1 255.255.255.0 <span class="comment">#设置IP地址</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int vlan 20</span><br><span class="line">ip address 192.168.20.1 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int f0/2</span><br><span class="line">no switchport <span class="comment">#关闭交换端口</span></span><br><span class="line">ip address 192.168.30.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">ip route 192.168.40.0 255.255.255.0 192.168.30.1 <span class="comment">#为三层交换机添加路由表</span></span><br></pre></td></tr></table></figure>
-
-<p>三层交换机vlan信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171715268.png"></p>
-<p>三层交换机路由表信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716986.png"></p>
-<p>三层交换机各个端口IP信息</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171915570.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716340.png"></p>
-<h4 id="连通性测试"><a href="#连通性测试" class="headerlink" title="连通性测试"></a>连通性测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171917227.png"></p>
-<p>由上图可知，PC0与PC1和PC2是连通的，所以此事属于不同Vlan的PC0、PC1、PC2、通过三层交换机实现了通信。</p>
-<h1 id="实验五结束"><a href="#实验五结束" class="headerlink" title="实验五结束"></a>实验五结束</h1>]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>局域网</category>
-      </categories>
-      <tags>
-        <tag>交换机</tag>
-        <tag>计算机网络</tag>
-        <tag>Cisco</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cisco Packet Tracer实验————综合实验</title>
-    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验</p>
-</blockquote>
-<h1 id="Cisco-Packet-Tracer实验————综合实验"><a href="#Cisco-Packet-Tracer实验————综合实验" class="headerlink" title="Cisco Packet Tracer实验————综合实验"></a>Cisco Packet Tracer实验————综合实验</h1><p>您好，我的博客是<a href="http://buzhouge.top/">不周阁</a></p>
-<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
-<li>能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。</li>
-<li>训练面向网络工程的思维和动手能力。</li>
-</ul>
-<h3 id="主要配置命令"><a href="#主要配置命令" class="headerlink" title="主要配置命令"></a>主要配置命令</h3><h5 id="交换机配置命令"><a href="#交换机配置命令" class="headerlink" title="交换机配置命令"></a>交换机配置命令</h5><p><strong>vlan</strong> 参数  创建一个指定编号的vlan</p>
-<p><strong>name</strong> 参数 对当前的vlan命名（改名）</p>
-<p>interface 参数  进入指定接口配置模式</p>
-<p><strong>switchport mode access</strong> 将当前接口的VLAN管理模式，设置为接入模式</p>
-<p><strong>switchport access vlan</strong> 参数 将当前接口划分到指定的vlan中</p>
-<p><strong>switchport mode trunk</strong> 将当前接口的VLAN管理模式，设置为中继模式</p>
-<p><strong>switchport trunk nativie vlan</strong> 参数 设置当前接口的本征vlan属性（对中继接口有效）</p>
-<p>switchport trunk allowed vlan 参数 设置当前接口能中继的vlan列表(对中继接口有效）</p>
-<p><strong>interface vlan</strong> 参数 在指定的vlan上创建一个逻辑节点（接口），有两个身份，名字为VLAN加上的所在vlan的编号。 作为逻辑节点，它有自己的MAC地址、IP地址（需要设置），可以跟其它节点通信，通常用于网络管理；作为接口，用于内部配置，对于三层交换机可作为路由接口用。</p>
-<p><strong>Show vlan brief</strong>  以简表形式显示设备内所划分的vlan</p>
-<p><strong>Show interfaces</strong> 参数 switchport 显示指定接口的有关vlan方面的配置属性值</p>
-<p><strong>Show interfaces trunk</strong> 显示当前的设备中的中继接口</p>
-<h5 id="路由器子接口的创建、Vlan协议封装命令"><a href="#路由器子接口的创建、Vlan协议封装命令" class="headerlink" title="路由器子接口的创建、Vlan协议封装命令"></a>路由器子接口的创建、Vlan协议封装命令</h5><p><strong>interface</strong> 参数1.参数2 创建或进入指定路由器接口的某个子接口，参数1为某个物理接口的名称，参数2为子接口号</p>
-<p><strong>encapsulation dot1q</strong> 参数 指定当前子接口使用中继协议802.1q通信、指定该接口所属的vlan</p>
-<h5 id="基本配置命令"><a href="#基本配置命令" class="headerlink" title="基本配置命令"></a>基本配置命令</h5><p><strong>no</strong>  参数表 取消某操作命令，后面的参数为前面某次所执行过的命令行</p>
-<p><strong>configure terminal</strong> 进入终端配置模式</p>
-<p><strong>copy running-config startup-config</strong> 把内存中的配置文件保存到NVRAM 中</p>
-<p><strong>enable</strong> 进入特权模式</p>
-<p><strong>exit</strong> 由当前模式退出到上层模式</p>
-<p><strong>end</strong>  退出到特权模式</p>
-<p><strong>hostname</strong> 设置主机的名字</p>
-<p><strong>interface</strong> 参数  进入指定路由器接口配置模式</p>
-<p><strong>ip address</strong> 参数表  设置接口的ip地址</p>
-<p><strong>no shutdown</strong>  激活网络接口</p>
-<p><strong>show running-config</strong>  显示内存中的配置文件</p>
-<p><strong>show interfaces</strong> 参数 显示接口的信息</p>
-<p><strong>ip route</strong> 参数表   添加静态路由</p>
-<p><strong>show ip route</strong>  查看路由表</p>
-<p><strong>ping</strong>  参数   网络连通测试，参数为目标节点</p>
-<p><strong>traceroute</strong> 参数 路由跟踪测试（对于windows主机命令为tracert），参数为目标节点</p>
-<h4 id="设计任务"><a href="#设计任务" class="headerlink" title="设计任务"></a>设计任务</h4><p>为某培训机构规划设计一个网络,要求在网络层给出仿真设计。已知该机构工作场所为一个园区，有若干房间，主要用途有办公、机房、宿舍、教室，有若干电脑需要联网，需要访问因特网。目前机构内部人员（办公人员、教员）约有20人，给学员配置的主机数目约200台。</p>
-<h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>目标网络是局域网。采用Ethernet设备进行组网，出口设备采用传统的路由器，通过服务商连接INTERNET。内网全部用交换机作互联设备。需要划分三个VLAN用于隔离网管、办公、教学流量。鉴于目前的用户数、网络流量有限，部署一台核心交换机（三层交换机）即可。</p>
-<h4 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h4><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171830847.png"></p>
-<h4 id="主机端网络配置"><a href="#主机端网络配置" class="headerlink" title="主机端网络配置"></a>主机端网络配置</h4><table>
+<p>然后在你主机的<code>Blog\source</code>文件夹下面添加一个<code>CNAME</code>文件，里面的内容填写你的域名,如<code>www.buzhouge.top</code>。</p>
+<p>然后进入你GitHub部署hexo博客的仓库，依次进入setting -&gt;  Pages ，在这里找到Custom domain,在这里添加上你的域名即可。然后将你的博客更新上传一次，等待几分钟域名解析，就能通过域名访问你的博客了。</p>
+<p>当然你可以不用一级域名来绑定GitHub，你可以有很多的二级域名，只需要在解析域名时将主机记录修改。比如：</p>
+<table>
 <thead>
 <tr>
-<th>设置</th>
-<th>IP地址</th>
-<th>子网掩码</th>
-<th>网关地址</th>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Lap0</td>
-<td>192.168.2.1</td>
-<td>255.255.255.0</td>
-<td>192.168.2.254</td>
-</tr>
-<tr>
-<td>Lap1</td>
-<td>192.168.99.99</td>
-<td>255.255.255.0</td>
-<td>192.168.99.254</td>
-</tr>
-<tr>
-<td>Lap2</td>
-<td>192.168.2.3</td>
-<td>255.255.255.0</td>
-<td>192.168.2.254</td>
-</tr>
-<tr>
-<td>PC0</td>
-<td>192.168.3.2</td>
-<td>255.255.255.0</td>
-<td>192.168.3.254</td>
-</tr>
-<tr>
-<td>PC1</td>
-<td>192.168.3.4</td>
-<td>255.255.255.0</td>
-<td>192.168.3.254</td>
+<td>git</td>
+<td>CNAME</td>
+<td>username.github.io</td>
 </tr>
 </tbody></table>
-<h4 id="配置交换机S1"><a href="#配置交换机S1" class="headerlink" title="配置交换机S1"></a>配置交换机S1</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进去全局模式</span></span><br><span class="line">hostname S1 <span class="comment">#修改名字为 S1</span></span><br><span class="line">vlan 2  <span class="comment"># 创建 Vlan2</span></span><br><span class="line">int fa0/2 <span class="comment"># 进入局部设置模式，选择接口f0/2</span></span><br><span class="line">sw mode access  <span class="comment"># 选择管理方式</span></span><br><span class="line">sw access vlan 2 <span class="comment"># 给该接口划分vlan</span></span><br><span class="line">vlan 3</span><br><span class="line">int fa0/3</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 3</span><br><span class="line">vlan 99 </span><br><span class="line">int fa0/4</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 99</span><br><span class="line">int fa0/1</span><br><span class="line">sw mode trunk <span class="comment"># 选择管理方式</span></span><br><span class="line">sw trunk natitive vlan 99 <span class="comment"># 本征vlan</span></span><br><span class="line">sw trunk allowed vlan 2,3,99 <span class="comment"># 所属Vlan</span></span><br></pre></td></tr></table></figure>
-
-<p>配置好查看交换机已配置的信息</p>
-<p>show run</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271650870.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271652131.png"></p>
-<p>查看分配的子网</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271651283.png"></p>
-<p>验证中继配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271938089.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271926527.png"></p>
-<p>在s0三层上的配置</p>
-<p>建立vlan2、vlan3、vlan99,验证配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271932590.png"></p>
-<p>配置中继接口f0&#x2F;1和f0&#x2F;2,验证中继配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271937553.png"></p>
-<p>接口f0&#x2F;1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271934265.png"></p>
-<p>接口f0&#x2F;2</p>
-<p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220427193930689.png" alt="image-20220427193930689"></p>
-<p>在S2上的配置</p>
-<p>建立vlan2、vlan3、vlan99,验证配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271943284.png"></p>
-<p>配置中继接口f0&#x2F;1,验证中继配置</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271944245.png"></p>
-<p>查看接口f0&#x2F;1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271945447.png"></p>
-<p>网管节点测试</p>
-<p>在S1上配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable  # 进入特权模式</span><br><span class="line">conf t  # 进入全局模式</span><br><span class="line">int vlan 99 # 进入局部设置模式，选择vlan99</span><br><span class="line">ip address 192.168.99.1 255.255.255.0 # 分配IP地址</span><br><span class="line">no shutdown # 打开端口</span><br><span class="line">ip default-gateway 192.168.99.254 # 设置网关</span><br><span class="line">line vty 0 15  # 创建16个远程访问终端</span><br><span class="line">passwd 123456  # 设置远程访问密码</span><br><span class="line">privilege level 15 # 设置管理员</span><br><span class="line">transport input telnet # 设定远程登陆可以使用的协议</span><br><span class="line">login  # 远程登陆时，开启口令</span><br></pre></td></tr></table></figure>
-
-<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956747.png"></p>
-<p>在S2上配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable</span><br><span class="line">conf t</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">ip default-gateway 192.168.99.254</span><br><span class="line">line vty 0 2</span><br><span class="line">passwd abc</span><br><span class="line">privilege level 2</span><br><span class="line">transport input telnet</span><br><span class="line">login </span><br></pre></td></tr></table></figure>
-
-<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S2</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956584.png"></p>
-<p>基于三层交换路由方案</p>
-<p>由核心交换机S0、出口路由器共同承担全网路由</p>
-<p>R1上设置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable # 进入特权模式</span><br><span class="line">conf t # 进入全局模式</span><br><span class="line">int f0/0  #  进入局部设置模式，选择端口f0/0</span><br><span class="line">ip address 192.168.4.2 255.255.255.252 # 分配IP地址</span><br><span class="line">ip routing 192.168.2.0 255.255.255.0 192.168.4.1 # 设置路由表</span><br><span class="line">ip routing 192.168.3.0 255.255.255.0 192.168.4.1</span><br><span class="line">ip routing 192.168.99.0 255.255.255.0 192.168.4.1</span><br></pre></td></tr></table></figure>
-
-<p>S0上的配置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable </span><br><span class="line">ocnf t </span><br><span class="line">int vlan 2</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 3</span><br><span class="line">ip address 192.168.3.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">vlan 4 # 创建vlan 4</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 4 </span><br><span class="line">int vlan 4</span><br><span class="line">ip address 192.168.4.1 255.255.255.252</span><br><span class="line">no switchport 	#关闭交换，开启路由</span><br><span class="line">ip routing 192.168.4.1 255.255.255.252</span><br></pre></td></tr></table></figure>
-
-<p>R1 路由表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023867.png"></p>
-<p>S0路由表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023068.png"></p>
-<p>使用vlan2 中的Lap0 分别ping vlan3中的PC1和vlan99中的Lap1</p>
-<p>Lap0 ping vlan3中的PC1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272026905.png"></p>
-<p>Lap0 ping vlan99中的Lap1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272027646.png"></p>
-<p>PC1 ping Lap1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029894.png"></p>
-<p>通过测试结果可知此时局域网内的各个vlan已处于连通的状态。</p>
-<p>改动网络拓扑，连接一个INTERNET接入服务商路由器，完成相应的仿真。</p>
-<p>该处分配网段为192.168.5.0</p>
-<p>改动后的拓扑图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029393.png"></p>
-<p>配置好之后使用PC2 ping 局域网内的主机测试连通性</p>
-<p>PC2 ping Lap0 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031126.png"></p>
-<p>PC2 ping PC1</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031246.png"></p>
-<h1 id="未完善先上传"><a href="#未完善先上传" class="headerlink" title="未完善先上传"></a>未完善先上传</h1>]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>局域网</category>
-      </categories>
+<p>此时解析的域名就是git.buzhouge.top</p>
+<p>可以通过<a href="http://git.buzhouge.top/">http://git.buzhouge.top</a> 来访问博客。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101320898.png"></p>
+<h3 id="云服务器绑定域名"><a href="#云服务器绑定域名" class="headerlink" title="云服务器绑定域名"></a>云服务器绑定域名</h3><p>如果你没有绑定域名，那么你可以直接通过公网ip访问你的博客，如果想要将云服务器与域名绑定就比比较简单了，直接去域名解析处添加解析记录</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>www</td>
+<td>A</td>
+<td>服务器公网IP</td>
+</tr>
+<tr>
+<td>@</td>
+<td>A</td>
+<td>服务器公网IP</td>
+</tr>
+</tbody></table>
+<p><a href="http://buzhouge.top/">http://buzhouge.top</a></p>
+<p>这样你就能通过域名访问你部署在服务器上的博客了。</p>
+<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1>]]></content>
       <tags>
-        <tag>交换机</tag>
-        <tag>计算机网络</tag>
-        <tag>Cisco</tag>
+        <tag>Hexo</tag>
+        <tag>Node.js</tag>
+        <tag>github</tag>
+        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
-    <title>Cisco Packet Tracer实验————静态路由与动态路由</title>
-    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为组建虚拟局域网</p>
-</blockquote>
-<h1 id="Cisco-Packet-Tracer实验————组建虚拟局域网"><a href="#Cisco-Packet-Tracer实验————组建虚拟局域网" class="headerlink" title="Cisco Packet Tracer实验————组建虚拟局域网"></a>Cisco Packet Tracer实验————组建虚拟局域网</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
-<li>理解静态路由和动态路由技术。</li>
-<li>掌握静态路由和默认路由配置。</li>
-<li>掌握OSPF路由基本配置。</li>
-</ul>
-<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><h4 id="什么是路由？"><a href="#什么是路由？" class="headerlink" title="什么是路由？"></a>什么是路由？</h4><p>路由（routing）是指分组从源到目的地时，决定端到端路径的网络范围的进程。路由工作在OSI参考模型第三层——网络层的数据包转发设备。路由器通过转发数据包来实现网络互连。虽然路由器可以支持多种协议（如TCP&#x2F;IP、IPX&#x2F;SPX、AppleTalk等协议），但是在我国绝大多数路由器运行TCP&#x2F;IP协议。路由器通常连接两个或多个由IP子网或点到点协议标识的逻辑端口，至少拥有1个物理端口。路由器根据收到数据包中的网络层地址以及路由器内部维护的路由表决定输出端口以及下一跳地址，并且重写链路层数据包头实现转发数据包。路由器通过动态维护路由表来反映当前的网络拓扑，并通过网络上其他路由器交换路由和链路信息来维护路由表。</p>
-<h4 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h4><p>静态路由（英语：Static routing），一种路由的方式，路由项由手动配置，而非动态决定。与动态路由不同，静态路由是固定的，不会改变，即使网络状况已经改变或是重新被组态。静态路由需要管理员手动配置,一般用于主机数量较少的情况。</p>
-<h4 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h4><p>动态路由是与静态路由相对的一个概念，指路由器能够根据路由器之间的交换的特定路由信息自动地建立自己的路由表，并且能够根据链路和节点的变化适时地进行自动调整。当网络中节点或节点间的链路发生故障，或存在其它可用路由时，动态路由可以自行选择最佳的可用路由并继续转发报文。动态路由使用于网络结构复杂，并且会变化的情况。</p>
-<h4 id="常见动态路由协议"><a href="#常见动态路由协议" class="headerlink" title="常见动态路由协议"></a>常见动态路由协议</h4><h5 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h5><p>路由信息协议（RIP）是内部网关协议IGP中最先得到广泛使用的协议。RIP是一种分布式的基于距离向量的路由选择协议，是因特网的标准协议，其最大优点就是实现简单，开销较小。</p>
-<h5 id="OSPF"><a href="#OSPF" class="headerlink" title="OSPF"></a>OSPF</h5><p>OSPF(Open Shortest Path First开放式最短路径优先）是一个内部网关协议(Interior Gateway Protocol，简称IGP），用于在单一自治系统（autonomous system,AS）内决策路由。</p>
-<h5 id="IS-IS"><a href="#IS-IS" class="headerlink" title="IS-IS"></a>IS-IS</h5><p>IS-IS（Intermediate System-to-Intermediate System，中间系统到中间系统）路由协议最初是ISO（the International Organization for Standardization，国际标准化组织）为CLNP（Connection Less Network Protocol，无连接网络协议）设计的一种动态路由协议。</p>
-<h5 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h5><p>边界网关协议（BGP）是运行于 TCP 上的一种自治系统的路由协议。BGP是唯一一个用来处理像因特网大小的网络的协议，也是唯一能够妥善处理好不相关路由域间的多路连接的协议。</p>
-<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><h4 id="静态路由-1"><a href="#静态路由-1" class="headerlink" title="静态路由"></a>静态路由</h4><h5 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171612913.png"></p>
-<h5 id="路由器R0配置"><a href="#路由器R0配置" class="headerlink" title="路由器R0配置"></a>路由器R0配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础设置</span></span><br><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 局部设置模式，选择端口G0/0</span></span><br><span class="line">ip address 192.168.1.254 255.255.255.0 <span class="comment">#为这个端口配置IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int G0/1</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int G0/2</span><br><span class="line">ip address 192.168.5.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="comment"># 路由设置,在全局模式下</span></span><br><span class="line">ip route 192.168.3.0 255.255.255.0 192.168.5.253 <span class="comment">#此处192.168.5.253为路由器R1与路由器相连的IP地址</span></span><br><span class="line">ip route 192.168.4.0 255.255.255.0 192.168.5.253</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>路由器R1与上述路由器R0配置同。</p>
-<p>R0配置后的路由表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171600029.png"></p>
-<p>R1配置后的路由表</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171600388.png"></p>
-<p>此处交换机不用设置，直接设置PC</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以PC0为例,其他PC机根据所处网段设置即可</span></span><br><span class="line">IP: 192.168.1.2</span><br><span class="line">NW: 255.255.255.0</span><br><span class="line">GW: 192.168.1.254</span><br></pre></td></tr></table></figure>
-
-<h5 id="测试连通性"><a href="#测试连通性" class="headerlink" title="测试连通性"></a>测试连通性</h5><p>使用PC1分别ping PC2和PC4</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171601720.png"></p>
-<p>如上图可知，PC1与PC2和PC4都处于连通的状态。由以上可知两个路由器的静态路由配置成功。</p>
-<h4 id="动态路由-1"><a href="#动态路由-1" class="headerlink" title="动态路由"></a>动态路由</h4><h5 id="网络拓扑图-1"><a href="#网络拓扑图-1" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171617153.png"></p>
-<h5 id="路由器R1配置"><a href="#路由器R1配置" class="headerlink" title="路由器R1配置"></a>路由器R1配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 局部设置模式，选择端口 G0/0</span></span><br><span class="line">ip address 192.168.1.254 255.255.255.0  <span class="comment">#为这个端口配置IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int G0/2</span><br><span class="line">ip address 192.168.4.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int G0/1</span><br><span class="line">ip adress 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在全局模式下</span></span><br><span class="line">router ospf 1 <span class="comment"># 运行ospf这个程序，该程序自带与路由器系统中。</span></span><br><span class="line">network 192.168.3.0 0.0.0.255 area 0 <span class="comment"># 路由器将这个网段声明出去，希望连接到这个网段</span></span><br><span class="line">network 192.168.5.0 0.0.0.255 area 0</span><br><span class="line">network 192.168.6.0 0.0.0.255 area 0</span><br></pre></td></tr></table></figure>
-
-<h5 id="R1的路由表"><a href="#R1的路由表" class="headerlink" title="R1的路由表"></a>R1的路由表</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171621397.png"></p>
-<p>另外两个路由器的配置与R1相同</p>
-<h5 id="测试连通性-1"><a href="#测试连通性-1" class="headerlink" title="测试连通性"></a>测试连通性</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171621458.png">由上图可知，PC0与PC1和PC2是连通的，从上方的路由表和PC之间的连通性可以看出路由器的动态路由已经配置成功。</p>
-<h1 id="实验四结束"><a href="#实验四结束" class="headerlink" title="实验四结束"></a>实验四结束</h1>]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>局域网</category>
-      </categories>
+    <title>谈谈自己</title>
+    <url>/2022/04/09/%E8%B0%88%E8%B0%88%E8%87%AA%E5%B7%B1/</url>
+    <content><![CDATA[<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204091315494.png"></p>
+<p>——2022.4.9    </p>
+<p>您好，我是杰。这是我的第一篇博客，用来记录和分享之后的学习与生活。<br>先谈谈我现在大学的经历，现在大三下。正如不少人一样，进入大学都对自己的学校不是那么“满意”。一腔热血，觉得自己的能力不该处于这个学校，一定能做出什么事情。不过我却只有三分钟热度，刚开始加入了各种社团，准备以后参加各种比赛，正有大干一场的准备。<br>​    大一上那年用51单片机点灯，用点阵显示几个字，做了个小功放，自己画PCD,做板子。也成功加入了学校内实践能力非常强的社团。大一上的生活可以说比较丰富的。但是之后突然袭来的新冠疫情，改变了很多事情（这只是给我自己的一个借口）。学校不开学，开始线上课程，我每天在家就是吃睡，根本无心上课。半个学期之后，课程内容什么都没学会，社团学长要做的作品还处于新建文件夹阶段，体重 从120+到了150+。这可能是我最安逸且焦虑的时期。到了5月份学校通知开学，开学不久之后就要来一次期中考试，并且一个月后又开始期末考试。社团作品进度依旧是5%… 无颜面对社团学长学姐，与学长沟通后退出社团（懦夫行为，这可能是我大学期间最大的遗憾）。退出社团之后开始全力补上之前落下的课程，最后期末考试没有挂科的课程，这是幸运的。<br>​    后面的时间大部分处于一种混沌的状态，不甘心现状，却又不敢大力去改变。也尝试过去参加比赛，电子设计大赛、数学建模、互联网+、大创项目，由于自己能力不足，当时也比较迷茫，也找不到方向，同时也没有契合自己的队友。最终这些比赛都止步于校赛、参与奖。刚退出社团的时候，当时跟我一起加入社团的朋友还经常邀请我一起组队比赛，但我都拒绝了（真的很懦弱）。后面看到他拿到了许多大的奖项，我只能祝福他，并且羡慕他。<br>​    我不知道是因为疫情还是因为什么，时间过得非常快，不知不觉就已经到了大三下。大二一年及大三上都是平平淡淡的度过，教室-食堂-宿舍。什么都没有获得，好的一点是成绩处于20%（不发达地区双非），目前看来能正常毕业。少有的比较值得庆祝的事情就是收获了爱情，和成功拿到了驾驶证。<br>现在正在写这篇文章的我，依然不知道以后会怎么样，将来会干嘛。很迷茫，文章写的也很乱。我并不是一个甘心平凡的人，我现在还有一些斗志，创建这个网站，写这篇博客的本心是寻求改变。暂定考研本校，希望多年后能将自己提升到一个自己满意的程度。</p>
+<p>感谢您的阅读，谢谢！</p>
+]]></content>
       <tags>
-        <tag>交换机</tag>
-        <tag>计算机网络</tag>
-        <tag>Cisco</tag>
+        <tag>Begin</tag>
       </tags>
   </entry>
   <entry>
@@ -727,68 +358,6 @@
 <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171235211.png"></p>
 <p>由上图，PC1 ping不通PC2,PC1在VLAN1，PC2在VLAN2,不在同一VLNA中。PC1ping通PC4,PC1和PC2都在VLAN1内。</p>
 <h1 id="实验三到此结束"><a href="#实验三到此结束" class="headerlink" title="实验三到此结束"></a>实验三到此结束</h1>]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>局域网</category>
-      </categories>
-      <tags>
-        <tag>交换机</tag>
-        <tag>计算机网络</tag>
-        <tag>Cisco</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cisco Packet Tracer 实验————配置交换机</title>
-    <url>/2022/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%8C/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为路由器的配置</p>
-</blockquote>
-<h1 id="Cisco-Packet-Tracer-实验————配置交换机"><a href="#Cisco-Packet-Tracer-实验————配置交换机" class="headerlink" title="Cisco Packet Tracer 实验————配置交换机"></a>Cisco Packet Tracer 实验————配置交换机</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
-<li>辨识交换机、路由器；熟悉网络设备接口、配线架、连接器等。</li>
-<li>掌握通过Console口连接交换机、路由器设备。</li>
-<li>掌握微机Telnet到交换机、路由器的配置方法。</li>
-<li>熟悉配置交换机的常用IOS命令。</li>
-</ul>
-<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ul>
-<li>微机串口与交换机、路由器的Console口连接。</li>
-<li>配置交换机、路由器允许微机Telnet权限</li>
-<li>配置交换机的基本参数，检查交换机的基本参数配置。</li>
-</ul>
-<h3 id="实验方法"><a href="#实验方法" class="headerlink" title="实验方法"></a>实验方法</h3><ul>
-<li>在Windows操作系统的计算机使用思科模拟器仿真。</li>
-<li>思科交换机、路由器实际操作与配置。</li>
-</ul>
-<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><p>交换机的基本配置模式</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152247394.png"></p>
-<ul>
-<li><p>用户模式：只允许用户访问有限量的基本监视命令。用户执行模式是在从 CLI 登录到 Cisco          交换机后所进入的默认模式。在switch&gt;提示符下键入enable，交换机进入特权命           令模式。</p>
-</li>
-<li><p>特权模式：特权模式的提示符为“#”，允许用户访问所有设备命令，如用于配置和管理的命令， </p>
-<p>​         特权执行模式可采用口令加以保护，使得只有获得授权的用户才能访问设备。</p>
-</li>
-<li><p>全局模式：在switch#提示符下键入configure terminal，出现提示符switch(config)#，此 </p>
-<p>​         时交换机处于全局设置模式，可以设置交换机的全局参数。</p>
-</li>
-<li><p>接口模式：要从全局配置模式下进入接口配置模式，应输入interface接口类型插槽号&#x2F;端口号</p>
-<pre><code>     命令。提示符将更改为switch(config-if)#。要退出接口配置模式，使用exit命          令。提示符恢复为switch (config)#，要退出全局配置模式，可以再次使用exit          命令。提示符切换为#，回到特权执行模式。进入以太网接口fastethernet0/1的命         令是`interface fastethernet 0/1`。
-</code></pre>
-</li>
-</ul>
-<h4 id="实验拓扑图"><a href="#实验拓扑图" class="headerlink" title="实验拓扑图"></a>实验拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152252424.png"></p>
-<h4 id="交换机属性配置"><a href="#交换机属性配置" class="headerlink" title="交换机属性配置"></a>交换机属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span>  <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t  <span class="comment"># 进入全局模式</span></span><br><span class="line">hostname S1 <span class="comment"># 设置交换机的名字为S1</span></span><br><span class="line"><span class="built_in">enable</span> pass 123 <span class="comment"># 设置使能密码为 123</span></span><br><span class="line">line vty 0 4  <span class="comment"># 创建5个远程登录终端line</span></span><br><span class="line">line con 0    <span class="comment"># 创建con远程登录终端line</span></span><br><span class="line">login         <span class="comment"># 允许远程登录</span></span><br><span class="line">pass 123      <span class="comment"># 设置远程登录的口令为 123</span></span><br><span class="line">login         <span class="comment"># 运行远程登录</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152256696.png"></p>
-<h4 id="交换机IP地址的管理和配置"><a href="#交换机IP地址的管理和配置" class="headerlink" title="交换机IP地址的管理和配置"></a>交换机IP地址的管理和配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int vlan 1 <span class="comment"># 进入vlan 1局部设置模式</span></span><br><span class="line">ip address 192.168.1.1 255.255.255.0 <span class="comment"># 设置端口IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment">#端口默认是关闭的，开启端口</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152258400.png"></p>
-<h4 id="交换机端口属性配置"><a href="#交换机端口属性配置" class="headerlink" title="交换机端口属性配置"></a>交换机端口属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int fa0/1 <span class="comment"># 进入端口 f0/1局部设置模式</span></span><br><span class="line">duplex auto <span class="comment"># 设置工作方式为auto</span></span><br><span class="line">speed auto  <span class="comment"># 设置速度为auto</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152259786.png"></p>
-<h4 id="Tenet远程登陆"><a href="#Tenet远程登陆" class="headerlink" title="Tenet远程登陆"></a>Tenet远程登陆</h4><p>如果出现以下错误可能是line console 0 为设置密码，重新回去设置密码即可。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152301004.png"></p>
-<p>重新设置密码后成功远程登陆</p>
-<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152302259.png"></p>
-<h1 id="实验二到此结束"><a href="#实验二到此结束" class="headerlink" title="实验二到此结束"></a>实验二到此结束</h1>]]></content>
       <categories>
         <category>计算机网络</category>
         <category>局域网</category>
@@ -2250,289 +1819,723 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客搭建部署到GitHub&amp;&amp;云服务器&amp;&amp;绑定域名</title>
-    <url>/2022/04/09/Hexo+github&amp;&amp;%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <title>Cisco Packet Tracer 实验————配置交换机</title>
+    <url>/2022/04/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%8C/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>这里我将介绍如何从零使用hexo搭建一个个人博客，并且将其部署到GitHub上或者服务器上，并且将自己的域名与GitHub或者服务器绑定，实现通过域名访问自己的博客。这个期间我踩了很多坑，所以我会尽量讲的清楚，不留坑。</p>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为路由器的配置</p>
 </blockquote>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>如果你好奇node.js是什么可以看这里<a href="https://www.sitepoint.com/node-js-is-the-new-black/">Node.js</a></p>
-<h3 id="NVM"><a href="#NVM" class="headerlink" title="NVM"></a>NVM</h3><ul>
-<li>这里我使用NVM来安装node.js，并且我也推荐使用这种方法来安装，nvm可以帮助你管理多个不同版本的node.js。因为你可能在不同的项目里需要到不同版本的node.js。</li>
+<h1 id="Cisco-Packet-Tracer-实验————配置交换机"><a href="#Cisco-Packet-Tracer-实验————配置交换机" class="headerlink" title="Cisco Packet Tracer 实验————配置交换机"></a>Cisco Packet Tracer 实验————配置交换机</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>辨识交换机、路由器；熟悉网络设备接口、配线架、连接器等。</li>
+<li>掌握通过Console口连接交换机、路由器设备。</li>
+<li>掌握微机Telnet到交换机、路由器的配置方法。</li>
+<li>熟悉配置交换机的常用IOS命令。</li>
 </ul>
-<ol>
-<li>下载NVM,可以直接前往<a href="https://github.com/coreybutler/nvm-windows/releases">GitHub</a>下载,选择nvm-setup.zip下载就行，之后直接解压按照默认方式安装就好。</li>
-</ol>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092304064.png"></p>
-<ol start="2">
-<li>进入命令行窗口输入 <code> nvm -v</code>查看是否安装成功，这里需要使用管理员权限打开CMD,后面的过程会用到管理员权限。下图为成功截图。</li>
-</ol>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092315834.png"></p>
-<ol start="3">
-<li>下载node.js</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm install node.jsb版本</span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line">nvm install 16.10.0</span><br></pre></td></tr></table></figure>
-
-<p>如果出现下载速度较慢的情况下可以为nvm添加淘宝源,找到nvm的安装路径，打开setting.txt文件（默认路径 C:\Users\用户名\AppData\Roaming\nvm）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node_mirror: https://npm.taobao.org/mirrors/node/</span><br><span class="line">npm_mirror: https://npm.taobao.org/mirrors/npm/</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092329312.png"></p>
-<ol start="4">
-<li>查看已经安装好的node.js版本，并选择node.js版本</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看版本：</span></span><br><span class="line">nvm list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择版本：</span></span><br><span class="line">nvm node.js版本</span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line">nvm 16.10.0</span><br></pre></td></tr></table></figure>
-
-<p>这里选择node.js版本需要管理员权限，如果出现乱码情况就是没有管理员权限，没有选择成功。想确定是否选择成功可以再次输入 <code>node list</code>查看，成功的清空下，版本后会有一段话，如（Currently using 64-bit executable）。</p>
-<ol start="5">
-<li>查看Node.js和npm版本</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204092335688.png"></p>
-<p>此时就已经安装好Node.js了。</p>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>直接去<a href="https://git-scm.com/">Git</a>官网下载就行,全部默认安装就行。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>具体问题可以去<a href="https://hexo.io/zh-cn/">Hexo</a>官网看</p>
-<ol>
-<li>全局安装Hexo,这里建议管理员启动CMD，不然后面可能会报错，也不要用powershell，这个也会报错，原因我暂时未知。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>查看hexo是否安装成功</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p>如果出现问题可以尝试将此路径 C:\Users\用户名\AppData\Roaming\nvm\v16.10.0 添加到系统的环境变量中。（这里包含hexo.cmd文件）</p>
-<ol start="3">
-<li>创建Hexo本地博客，新建一个blog文件夹，在这个文件夹内打开CMD</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建：</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 本地运行</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204100931780.png"></p>
-<p>此时表示本地已经安装好hexo。</p>
-<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
-<li><p>首先你需要有一个<a href="https://github.com/">Github</a>账号，直接去<a href="https://github.com/">Github</a>官网注册就行。</p>
+<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ul>
+<li>微机串口与交换机、路由器的Console口连接。</li>
+<li>配置交换机、路由器允许微机Telnet权限</li>
+<li>配置交换机的基本参数，检查交换机的基本参数配置。</li>
+</ul>
+<h3 id="实验方法"><a href="#实验方法" class="headerlink" title="实验方法"></a>实验方法</h3><ul>
+<li>在Windows操作系统的计算机使用思科模拟器仿真。</li>
+<li>思科交换机、路由器实际操作与配置。</li>
+</ul>
+<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><p>交换机的基本配置模式</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152247394.png"></p>
+<ul>
+<li><p>用户模式：只允许用户访问有限量的基本监视命令。用户执行模式是在从 CLI 登录到 Cisco          交换机后所进入的默认模式。在switch&gt;提示符下键入enable，交换机进入特权命           令模式。</p>
 </li>
-<li><p>创建一个仓库（repository），第一次尽量以<code>用户名.github.io</code>,当然你可以使用其他合理的名字，不过可能会出现问题。</p>
+<li><p>特权模式：特权模式的提示符为“#”，允许用户访问所有设备命令，如用于配置和管理的命令， </p>
+<p>​         特权执行模式可采用口令加以保护，使得只有获得授权的用户才能访问设备。</p>
 </li>
-</ol>
-<p>   选择public和 <code>add a README file</code>即可</p>
-<ol start="3">
-<li>在Blog文件夹打开CMD，安装一个插件（部署到远程必要的插件）。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>打开Blog文件夹下的_config.yml(配置文件),修改最后的deploy:</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/sophon123/helloword.github.io.git</span>  <span class="comment">#你的仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span>  <span class="comment">#选择的仓库分支</span></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>将hexo部署到GitHub</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment"># 清楚缓存</span></span><br><span class="line">hexo g <span class="comment"># 生成网站静态文件到默认设置的 public 文件夹</span></span><br><span class="line">hexo d <span class="comment"># 将生成的网站静态文件部署到设定的远程仓库</span></span><br></pre></td></tr></table></figure>
-
-<p>如果出现如下报错，是由于你这台电脑第一次使用git。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204100952793.png"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入以下内容</span></span><br><span class="line">git config --git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line"><span class="comment"># 例如</span></span><br><span class="line">git config --global user.email xxxxxx@163.com </span><br><span class="line">git config --global user.name sophon3</span><br></pre></td></tr></table></figure>
-
-<p>设置完成后再输入<code>hexo d</code>重新上传，如果出现下图可以直接登陆上传，不过更加推荐给GitHub添加你电脑的rsa密钥，这样以后上传就不再需要登陆。即使你配置了rsa登陆，这里也需要你先登陆一次。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101031229.png"></p>
-<ol start="6">
-<li>将rsa添加到github</li>
-</ol>
-<p>在CMD窗口输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
-
-<p>直接回车就行，全部选择默认</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101040194.png"></p>
-<p>密钥生成成功，打开文件夹 <code>C:\Users\Sophon\.ssh</code>下的<code>id_rsa.pub</code>文件，里面就是本机的rsa密钥。打开你的GitHub，点击你的头像，依次选择setting -&gt; SSH and GPG keys -&gt; New SSH key ,</p>
-<p>将你电脑的rsa密钥添加到GitHub上。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101047513.png"></p>
-<p>再次使用<code>hexo d</code>上传，这时候你就能通过<code>https://username.github.io/仓库名</code>访问了。这时候部署到GitHub端基本完成了。如果你的仓库名是用户名则不需要加仓库名。如果出现无法渲染的情况，请打开blog文件夹下的_config.yml文件，按照其要求修改url,即改为<code>https://username.github.io/仓库</code></p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101155960.png"></p>
-<h2 id="部署到云服务器（Ubuntu20系统）"><a href="#部署到云服务器（Ubuntu20系统）" class="headerlink" title="部署到云服务器（Ubuntu20系统）"></a>部署到云服务器（Ubuntu20系统）</h2><ul>
-<li>该部分内容有参考此博客<a href="https://mrxiuxing.com/posts/d3b909a4.html">将Hexo博客部署至腾讯云服务器(Ubuntu18.04)</a></li>
+<li><p>全局模式：在switch#提示符下键入configure terminal，出现提示符switch(config)#，此 </p>
+<p>​         时交换机处于全局设置模式，可以设置交换机的全局参数。</p>
+</li>
+<li><p>接口模式：要从全局配置模式下进入接口配置模式，应输入interface接口类型插槽号&#x2F;端口号</p>
+<pre><code>     命令。提示符将更改为switch(config-if)#。要退出接口配置模式，使用exit命          令。提示符恢复为switch (config)#，要退出全局配置模式，可以再次使用exit          命令。提示符切换为#，回到特权执行模式。进入以太网接口fastethernet0/1的命         令是`interface fastethernet 0/1`。
+</code></pre>
+</li>
 </ul>
-<ol>
-<li><a href="##%E5%AE%89%E8%A3%85Node.js">hexo本地部署</a>与上方一致直接进入服务器部署，什么厂家的服务器都一样，我这里使用的系统为ubuntu20.04。</li>
-<li>安装git和nginx,Ubuntu20好像默认已经安装有git</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git nginx -y</span><br></pre></td></tr></table></figure>
+<h4 id="实验拓扑图"><a href="#实验拓扑图" class="headerlink" title="实验拓扑图"></a>实验拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152252424.png"></p>
+<h4 id="交换机属性配置"><a href="#交换机属性配置" class="headerlink" title="交换机属性配置"></a>交换机属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span>  <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t  <span class="comment"># 进入全局模式</span></span><br><span class="line">hostname S1 <span class="comment"># 设置交换机的名字为S1</span></span><br><span class="line"><span class="built_in">enable</span> pass 123 <span class="comment"># 设置使能密码为 123</span></span><br><span class="line">line vty 0 4  <span class="comment"># 创建5个远程登录终端line</span></span><br><span class="line">line con 0    <span class="comment"># 创建con远程登录终端line</span></span><br><span class="line">login         <span class="comment"># 允许远程登录</span></span><br><span class="line">pass 123      <span class="comment"># 设置远程登录的口令为 123</span></span><br><span class="line">login         <span class="comment"># 运行远程登录</span></span><br></pre></td></tr></table></figure>
 
-<p>测试是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152256696.png"></p>
+<h4 id="交换机IP地址的管理和配置"><a href="#交换机IP地址的管理和配置" class="headerlink" title="交换机IP地址的管理和配置"></a>交换机IP地址的管理和配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int vlan 1 <span class="comment"># 进入vlan 1局部设置模式</span></span><br><span class="line">ip address 192.168.1.1 255.255.255.0 <span class="comment"># 设置端口IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment">#端口默认是关闭的，开启端口</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101241595.png"></p>
-<p>测试nginx是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start nginx.service    <span class="comment"># 启动服务</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152258400.png"></p>
+<h4 id="交换机端口属性配置"><a href="#交换机端口属性配置" class="headerlink" title="交换机端口属性配置"></a>交换机端口属性配置</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">int fa0/1 <span class="comment"># 进入端口 f0/1局部设置模式</span></span><br><span class="line">duplex auto <span class="comment"># 设置工作方式为auto</span></span><br><span class="line">speed auto  <span class="comment"># 设置速度为auto</span></span><br></pre></td></tr></table></figure>
 
-<p>去浏览器输入服务器的公网ip,看见如下图类似的画面则已经安装成功</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101242373.png"></p>
-<ol start="3">
-<li>创建一个git用户</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo adduser git  <span class="comment"># 创建git用户</span></span><br><span class="line">sudo passwd 12345 <span class="comment"># 设置git用户的密码</span></span><br><span class="line">sudo <span class="built_in">chmod</span> 740 /etc/sudoers   <span class="comment">#(该文件为只读，想要增加内容必须增加权限)</span></span><br></pre></td></tr></table></figure>
-
-<p>给git用户权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/sudoeres</span><br><span class="line"><span class="comment"># 如果没有成功进去可以先进入/etc目录</span></span><br><span class="line"><span class="built_in">cd</span> /etc</span><br><span class="line">sudo vim /etc/sudoeres</span><br></pre></td></tr></table></figure>
-
-<p>找到 <code>root    ALL=(ALL:ALL) ALL</code>在其下面添加 <code>git     ALL=(ALL;ALL) ALL</code>,如下图 。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101218177.png"></p>
-<p>保存退出后将权限修改回来。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 400 /etc/sudoers</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>将你主机的rsa与云服务器绑定。怎么得到本机rsa与上方配置GitHub的方法一样。</li>
-</ol>
-<p>切换到git用户，创建一个<code>.ssh</code>文件夹，在中这个文件夹下面创建一个<code>authorized_keys</code>，这个文件没有后缀。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su git</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh</span><br><span class="line">vim ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-
-<p>将你的主机<code>C:\Users\Sophon\.ssh</code>下的<code>id_rsa.pub</code>的内容复制到 authorized_keys下面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 验证是否绑定成功</span></span><br><span class="line">ssh git@服务器公网ip</span><br></pre></td></tr></table></figure>
-
-<p>如果不需要密码就能登陆上你的服务器，证明已经绑定成功。</p>
-<p>修改这里的权限</p>
-<ol start="5">
-<li>建立网站根目录</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su root  <span class="comment"># 切换到root用户</span></span><br><span class="line"><span class="built_in">mkdir</span> /home/hexo  <span class="comment"># 作为网站根目录</span></span><br><span class="line"><span class="built_in">chown</span> git:git -R /home/hexo</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>配置Nginx</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default    <span class="comment"># 编辑配置</span></span><br></pre></td></tr></table></figure>
-
-<p>内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80 default_server;</span><br><span class="line">    listen       [::]:80 default_server;</span><br><span class="line">    #server_name  www.yours_server_name.com;    # 修改为自己的域名</span><br><span class="line">    root         /home/hexo;    # 修改为网站的根目录</span><br><span class="line">    index index.html index.php index.htm;</span><br><span class="line">    #Load configuration files for the default server block.</span><br><span class="line">    include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 404 /404.html;</span><br><span class="line">        location = /40x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    error_page 500 502 503 504 /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用nginx -t命令检查配置文件的语法是否出错。然后使用systemctl restart nginx.service systemctl命令重启服务即可。</p>
-<ol start="7">
-<li>建立git库</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">su root</span><br><span class="line"><span class="built_in">cd</span> /home/git   <span class="comment"># 在 git 用户目录下创建</span></span><br><span class="line">git init --bare blog.git   <span class="comment"># 一定要加上--bare</span></span><br><span class="line"><span class="built_in">chown</span> git:git -R blog.git   <span class="comment">#赋予git用户权限</span></span><br></pre></td></tr></table></figure>
-
-<p>这里使用的是<code>post-receive</code>这个钩子，当git有收发的时候就会调用这个钩子。 在<code>blog.git</code>裸库的 <code>hooks</code>文件夹中，新建<code>post-receive</code>文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
-
-<p>填入以下内容，其中 &#x2F;home&#x2F;hexo 为网站目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">git --work-tree=/home/hexo --git-dir=/home/git/blog.git checkout -f</span><br></pre></td></tr></table></figure>
-
-<p>添加权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>本地配置</li>
-</ol>
-<p>找到你主机的blog文件夹，打开_config.yml文件，在最后配置deploy。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101257198.png"></p>
-<p>如果你需要部署到一个地方，只需要添加一个链接即可。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 例如</span></span><br><span class="line">tencent_cloud: git@公网ip:/home/git/blog.git</span><br></pre></td></tr></table></figure>
-
-<p>这里就已经部署完成了，先<code>hexo clean</code>清理一下缓存，就可以<code>hexo g; hexo d</code>部署了</p>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><ul>
-<li>首先你需要有一个域名，正常到腾讯云或者阿里云购买一个就行了。</li>
-<li>购买之后到域名解析处，在购买域名的厂商那里找，每个厂商会有些不同。</li>
-</ul>
-<img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101306184.png" style="zoom:80%;" />
-
-<p>腾讯云的界面如上，点击你蓝色的域名就能进入管理。</p>
-<h3 id="GitHub-Page绑定域名"><a href="#GitHub-Page绑定域名" class="headerlink" title="GitHub Page绑定域名"></a>GitHub Page绑定域名</h3><p>添加一条解析记录，具体你可以看看页面给的帮助文档</p>
-<p>例如：</p>
-<table>
-<thead>
-<tr>
-<th>主机记录</th>
-<th>记录类型</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>www</td>
-<td>CNAME</td>
-<td>username.github.io</td>
-</tr>
-</tbody></table>
-<p>然后在你主机的<code>Blog\source</code>文件夹下面添加一个<code>CNAME</code>文件，里面的内容填写你的域名,如<code>www.buzhouge.top</code>。</p>
-<p>然后进入你GitHub部署hexo博客的仓库，依次进入setting -&gt;  Pages ，在这里找到Custom domain,在这里添加上你的域名即可。然后将你的博客更新上传一次，等待几分钟域名解析，就能通过域名访问你的博客了。</p>
-<p>当然你可以不用一级域名来绑定GitHub，你可以有很多的二级域名，只需要在解析域名时将主机记录修改。比如：</p>
-<table>
-<thead>
-<tr>
-<th>主机记录</th>
-<th>记录类型</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>git</td>
-<td>CNAME</td>
-<td>username.github.io</td>
-</tr>
-</tbody></table>
-<p>此时解析的域名就是git.buzhouge.top</p>
-<p>可以通过<a href="http://git.buzhouge.top/">http://git.buzhouge.top</a> 来访问博客。</p>
-<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204101320898.png"></p>
-<h3 id="云服务器绑定域名"><a href="#云服务器绑定域名" class="headerlink" title="云服务器绑定域名"></a>云服务器绑定域名</h3><p>如果你没有绑定域名，那么你可以直接通过公网ip访问你的博客，如果想要将云服务器与域名绑定就比比较简单了，直接去域名解析处添加解析记录</p>
-<table>
-<thead>
-<tr>
-<th>主机记录</th>
-<th>记录类型</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>www</td>
-<td>A</td>
-<td>服务器公网IP</td>
-</tr>
-<tr>
-<td>@</td>
-<td>A</td>
-<td>服务器公网IP</td>
-</tr>
-</tbody></table>
-<p><a href="http://buzhouge.top/">http://buzhouge.top</a></p>
-<p>这样你就能通过域名访问你部署在服务器上的博客了。</p>
-<h1 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h1>]]></content>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152259786.png"></p>
+<h4 id="Tenet远程登陆"><a href="#Tenet远程登陆" class="headerlink" title="Tenet远程登陆"></a>Tenet远程登陆</h4><p>如果出现以下错误可能是line console 0 为设置密码，重新回去设置密码即可。</p>
+<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152301004.png"></p>
+<p>重新设置密码后成功远程登陆</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204152302259.png"></p>
+<h1 id="实验二到此结束"><a href="#实验二到此结束" class="headerlink" title="实验二到此结束"></a>实验二到此结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Node.js</tag>
-        <tag>github</tag>
-        <tag>服务器</tag>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
       </tags>
   </entry>
   <entry>
-    <title>谈谈自己</title>
-    <url>/2022/04/09/%E8%B0%88%E8%B0%88%E8%87%AA%E5%B7%B1/</url>
-    <content><![CDATA[<p><img src="http://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204091315494.png"></p>
-<p>——2022.4.9    </p>
-<p>您好，我是杰。这是我的第一篇博客，用来记录和分享之后的学习与生活。<br>先谈谈我现在大学的经历，现在大三下。正如不少人一样，进入大学都对自己的学校不是那么“满意”。一腔热血，觉得自己的能力不该处于这个学校，一定能做出什么事情。不过我却只有三分钟热度，刚开始加入了各种社团，准备以后参加各种比赛，正有大干一场的准备。<br>​    大一上那年用51单片机点灯，用点阵显示几个字，做了个小功放，自己画PCD,做板子。也成功加入了学校内实践能力非常强的社团。大一上的生活可以说比较丰富的。但是之后突然袭来的新冠疫情，改变了很多事情（这只是给我自己的一个借口）。学校不开学，开始线上课程，我每天在家就是吃睡，根本无心上课。半个学期之后，课程内容什么都没学会，社团学长要做的作品还处于新建文件夹阶段，体重 从120+到了150+。这可能是我最安逸且焦虑的时期。到了5月份学校通知开学，开学不久之后就要来一次期中考试，并且一个月后又开始期末考试。社团作品进度依旧是5%… 无颜面对社团学长学姐，与学长沟通后退出社团（懦夫行为，这可能是我大学期间最大的遗憾）。退出社团之后开始全力补上之前落下的课程，最后期末考试没有挂科的课程，这是幸运的。<br>​    后面的时间大部分处于一种混沌的状态，不甘心现状，却又不敢大力去改变。也尝试过去参加比赛，电子设计大赛、数学建模、互联网+、大创项目，由于自己能力不足，当时也比较迷茫，也找不到方向，同时也没有契合自己的队友。最终这些比赛都止步于校赛、参与奖。刚退出社团的时候，当时跟我一起加入社团的朋友还经常邀请我一起组队比赛，但我都拒绝了（真的很懦弱）。后面看到他拿到了许多大的奖项，我只能祝福他，并且羡慕他。<br>​    我不知道是因为疫情还是因为什么，时间过得非常快，不知不觉就已经到了大三下。大二一年及大三上都是平平淡淡的度过，教室-食堂-宿舍。什么都没有获得，好的一点是成绩处于20%（不发达地区双非），目前看来能正常毕业。少有的比较值得庆祝的事情就是收获了爱情，和成功拿到了驾驶证。<br>现在正在写这篇文章的我，依然不知道以后会怎么样，将来会干嘛。很迷茫，文章写的也很乱。我并不是一个甘心平凡的人，我现在还有一些斗志，创建这个网站，写这篇博客的本心是寻求改变。暂定考研本校，希望多年后能将自己提升到一个自己满意的程度。</p>
-<p>感谢您的阅读，谢谢！</p>
-]]></content>
+    <title>Cisco Packet Tracer实验————静态路由与动态路由</title>
+    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%9B%9B/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为组建虚拟局域网</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————组建虚拟局域网"><a href="#Cisco-Packet-Tracer实验————组建虚拟局域网" class="headerlink" title="Cisco Packet Tracer实验————组建虚拟局域网"></a>Cisco Packet Tracer实验————组建虚拟局域网</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>理解静态路由和动态路由技术。</li>
+<li>掌握静态路由和默认路由配置。</li>
+<li>掌握OSPF路由基本配置。</li>
+</ul>
+<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><h4 id="什么是路由？"><a href="#什么是路由？" class="headerlink" title="什么是路由？"></a>什么是路由？</h4><p>路由（routing）是指分组从源到目的地时，决定端到端路径的网络范围的进程。路由工作在OSI参考模型第三层——网络层的数据包转发设备。路由器通过转发数据包来实现网络互连。虽然路由器可以支持多种协议（如TCP&#x2F;IP、IPX&#x2F;SPX、AppleTalk等协议），但是在我国绝大多数路由器运行TCP&#x2F;IP协议。路由器通常连接两个或多个由IP子网或点到点协议标识的逻辑端口，至少拥有1个物理端口。路由器根据收到数据包中的网络层地址以及路由器内部维护的路由表决定输出端口以及下一跳地址，并且重写链路层数据包头实现转发数据包。路由器通过动态维护路由表来反映当前的网络拓扑，并通过网络上其他路由器交换路由和链路信息来维护路由表。</p>
+<h4 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h4><p>静态路由（英语：Static routing），一种路由的方式，路由项由手动配置，而非动态决定。与动态路由不同，静态路由是固定的，不会改变，即使网络状况已经改变或是重新被组态。静态路由需要管理员手动配置,一般用于主机数量较少的情况。</p>
+<h4 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h4><p>动态路由是与静态路由相对的一个概念，指路由器能够根据路由器之间的交换的特定路由信息自动地建立自己的路由表，并且能够根据链路和节点的变化适时地进行自动调整。当网络中节点或节点间的链路发生故障，或存在其它可用路由时，动态路由可以自行选择最佳的可用路由并继续转发报文。动态路由使用于网络结构复杂，并且会变化的情况。</p>
+<h4 id="常见动态路由协议"><a href="#常见动态路由协议" class="headerlink" title="常见动态路由协议"></a>常见动态路由协议</h4><h5 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h5><p>路由信息协议（RIP）是内部网关协议IGP中最先得到广泛使用的协议。RIP是一种分布式的基于距离向量的路由选择协议，是因特网的标准协议，其最大优点就是实现简单，开销较小。</p>
+<h5 id="OSPF"><a href="#OSPF" class="headerlink" title="OSPF"></a>OSPF</h5><p>OSPF(Open Shortest Path First开放式最短路径优先）是一个内部网关协议(Interior Gateway Protocol，简称IGP），用于在单一自治系统（autonomous system,AS）内决策路由。</p>
+<h5 id="IS-IS"><a href="#IS-IS" class="headerlink" title="IS-IS"></a>IS-IS</h5><p>IS-IS（Intermediate System-to-Intermediate System，中间系统到中间系统）路由协议最初是ISO（the International Organization for Standardization，国际标准化组织）为CLNP（Connection Less Network Protocol，无连接网络协议）设计的一种动态路由协议。</p>
+<h5 id="BGP"><a href="#BGP" class="headerlink" title="BGP"></a>BGP</h5><p>边界网关协议（BGP）是运行于 TCP 上的一种自治系统的路由协议。BGP是唯一一个用来处理像因特网大小的网络的协议，也是唯一能够妥善处理好不相关路由域间的多路连接的协议。</p>
+<h3 id="实验过程"><a href="#实验过程" class="headerlink" title="实验过程"></a>实验过程</h3><h4 id="静态路由-1"><a href="#静态路由-1" class="headerlink" title="静态路由"></a>静态路由</h4><h5 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171612913.png"></p>
+<h5 id="路由器R0配置"><a href="#路由器R0配置" class="headerlink" title="路由器R0配置"></a>路由器R0配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 基础设置</span></span><br><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 局部设置模式，选择端口G0/0</span></span><br><span class="line">ip address 192.168.1.254 255.255.255.0 <span class="comment">#为这个端口配置IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int G0/1</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int G0/2</span><br><span class="line">ip address 192.168.5.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="comment"># 路由设置,在全局模式下</span></span><br><span class="line">ip route 192.168.3.0 255.255.255.0 192.168.5.253 <span class="comment">#此处192.168.5.253为路由器R1与路由器相连的IP地址</span></span><br><span class="line">ip route 192.168.4.0 255.255.255.0 192.168.5.253</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>路由器R1与上述路由器R0配置同。</p>
+<p>R0配置后的路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171600029.png"></p>
+<p>R1配置后的路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171600388.png"></p>
+<p>此处交换机不用设置，直接设置PC</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 以PC0为例,其他PC机根据所处网段设置即可</span></span><br><span class="line">IP: 192.168.1.2</span><br><span class="line">NW: 255.255.255.0</span><br><span class="line">GW: 192.168.1.254</span><br></pre></td></tr></table></figure>
+
+<h5 id="测试连通性"><a href="#测试连通性" class="headerlink" title="测试连通性"></a>测试连通性</h5><p>使用PC1分别ping PC2和PC4</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171601720.png"></p>
+<p>如上图可知，PC1与PC2和PC4都处于连通的状态。由以上可知两个路由器的静态路由配置成功。</p>
+<h4 id="动态路由-1"><a href="#动态路由-1" class="headerlink" title="动态路由"></a>动态路由</h4><h5 id="网络拓扑图-1"><a href="#网络拓扑图-1" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171617153.png"></p>
+<h5 id="路由器R1配置"><a href="#路由器R1配置" class="headerlink" title="路由器R1配置"></a>路由器R1配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 局部设置模式，选择端口 G0/0</span></span><br><span class="line">ip address 192.168.1.254 255.255.255.0  <span class="comment">#为这个端口配置IP地址和子网掩码</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int G0/2</span><br><span class="line">ip address 192.168.4.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int G0/1</span><br><span class="line">ip adress 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在全局模式下</span></span><br><span class="line">router ospf 1 <span class="comment"># 运行ospf这个程序，该程序自带与路由器系统中。</span></span><br><span class="line">network 192.168.3.0 0.0.0.255 area 0 <span class="comment"># 路由器将这个网段声明出去，希望连接到这个网段</span></span><br><span class="line">network 192.168.5.0 0.0.0.255 area 0</span><br><span class="line">network 192.168.6.0 0.0.0.255 area 0</span><br></pre></td></tr></table></figure>
+
+<h5 id="R1的路由表"><a href="#R1的路由表" class="headerlink" title="R1的路由表"></a>R1的路由表</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171621397.png"></p>
+<p>另外两个路由器的配置与R1相同</p>
+<h5 id="测试连通性-1"><a href="#测试连通性-1" class="headerlink" title="测试连通性"></a>测试连通性</h5><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171621458.png">由上图可知，PC0与PC1和PC2是连通的，从上方的路由表和PC之间的连通性可以看出路由器的动态路由已经配置成功。</p>
+<h1 id="实验四结束"><a href="#实验四结束" class="headerlink" title="实验四结束"></a>实验四结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
       <tags>
-        <tag>Begin</tag>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/04/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.![](​<a href="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/20220409101">https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/20220409101</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Cisco Packet Tracer实验————多层交换机技术</title>
+    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E4%BA%94/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为多层交换技术</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————多层交换技术"><a href="#Cisco-Packet-Tracer实验————多层交换技术" class="headerlink" title="Cisco Packet Tracer实验————多层交换技术"></a>Cisco Packet Tracer实验————多层交换技术</h1><h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>理解三层交换原理。</li>
+<li>掌握三层交换机基本配置。</li>
+<li>掌握三层交换机VLAN间转发配置。</li>
+</ul>
+<h3 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h3><blockquote>
+<p>三层交换机就是具有部分路由器功能的交换机，既可以工作在OSI网络标准模型的第三层（网络层）也可以工作在二层:(数据链路层)。三层交换机的最重要目的是加快大型局域网内部的数据交换，所具有的路由功能也是为这目的服务的，能够做到一次路由，多次转发。<br>   对于数据包转发等规律性的过程硬件高速实现，而像路由信息更新、路由表维护、路由计算、路由确定等功能，由软件实现。</p>
+</blockquote>
+<p><strong>重点：</strong> <strong>一次路由，多次转发</strong></p>
+<h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171646650.png"></p>
+<h5 id="二层交换机配置"><a href="#二层交换机配置" class="headerlink" title="二层交换机配置"></a>二层交换机配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 配置二层交换机S0</span></span><br><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">vlan 10 <span class="comment"># 新建vlan 10</span></span><br><span class="line">vlan 20 <span class="comment"># 新建vlan 20 </span></span><br><span class="line">int f0/1 <span class="comment"># 进入局部模式，选择端口f0/1</span></span><br><span class="line">sw mode access <span class="comment"># 设置模式为access </span></span><br><span class="line">sw access vlan 10 <span class="comment"># 将该接口分配至 Vlan 10</span></span><br><span class="line">int f0/2 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 20</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode trunk <span class="comment"># 设置接口f0/3为 trunk模式</span></span><br></pre></td></tr></table></figure>
+<p>查看二层交换机配置情况</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171656786.png"></p>
+<h5 id="路由器配置"><a href="#路由器配置" class="headerlink" title="路由器配置"></a>路由器配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">int G0/0 <span class="comment"># 进入局部模式，选择端口G0/0 </span></span><br><span class="line">ip address 192.168.30.1 255.255.255.0  <span class="comment"># 为端口G0/0分配IP地址</span></span><br><span class="line">no shutdown <span class="comment">#开启端口</span></span><br><span class="line">int G0/1</span><br><span class="line">ip address 192.168.40.1 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="built_in">exit</span> <span class="comment">#回到上一层模式</span></span><br><span class="line">ip route 192.168.10.0 255.255.255.0 192.168.30.2 <span class="comment">#设置路由表，路由到192.168.10.0网段的下一跳是192.168.30.2</span></span><br><span class="line">ip route 192.168.20.0 255.255.255.0 192.168.30.2</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>路由器路由表信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171705360.png"></p>
+<p>路由器各个端口信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171705781.png"></p>
+<h5 id="三层交换机配置"><a href="#三层交换机配置" class="headerlink" title="三层交换机配置"></a>三层交换机配置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进入全局模式</span></span><br><span class="line">vlan 10 <span class="comment"># 新建vlan 10</span></span><br><span class="line">vlan 20 <span class="comment"># 新建vlan 20</span></span><br><span class="line">int f0/1 <span class="comment"># 进入局部模式，选择端口f0/1</span></span><br><span class="line">sw mode trunk <span class="comment">#选择 trunk模式</span></span><br><span class="line">sw trunk encapsulation dotlq <span class="comment">#设置端口封装协议为 dotlq</span></span><br><span class="line">int vlan 10 <span class="comment">#选择vlan 10</span></span><br><span class="line">ip address 192.168.10.1 255.255.255.0 <span class="comment">#设置IP地址</span></span><br><span class="line">no shutdown <span class="comment"># 打开端口</span></span><br><span class="line">int vlan 20</span><br><span class="line">ip address 192.168.20.1 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int f0/2</span><br><span class="line">no switchport <span class="comment">#关闭交换端口</span></span><br><span class="line">ip address 192.168.30.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">ip route 192.168.40.0 255.255.255.0 192.168.30.1 <span class="comment">#为三层交换机添加路由表</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+<p>三层交换机vlan信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171715268.png"></p>
+<p>三层交换机路由表信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716986.png"></p>
+<p>三层交换机各个端口IP信息</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171915570.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171716340.png"></p>
+<h4 id="连通性测试"><a href="#连通性测试" class="headerlink" title="连通性测试"></a>连通性测试</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171917227.png"></p>
+<p>由上图可知，PC0与PC1和PC2是连通的，所以此事属于不同Vlan的PC0、PC1、PC2、通过三层交换机实现了通信。</p>
+<h1 id="实验五结束"><a href="#实验五结束" class="headerlink" title="实验五结束"></a>实验五结束</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
       <tags>
-        <tag>hello world</tag>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人周记</title>
+    <url>/2022/04/20/%E7%94%9F%E6%B4%BB/%E5%91%A8%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="你好，再贝"><a href="#你好，再贝" class="headerlink" title="你好，再贝"></a>你好，再贝</h1><blockquote>
+<p>个人日程记录，每天更新，直到我不想更新了…</p>
+<p>想写什么写什么</p>
+<p>树洞？</p>
+</blockquote>
+<h2 id="2022-11"><a href="#2022-11" class="headerlink" title="2022-11"></a>2022-11</h2><blockquote>
+<p>The Champion!</p>
+</blockquote>
+<blockquote>
+<p>Don’t care about foever only care about once owned!</p>
+<p>Enjoy your life story!</p>
+</blockquote>
+<h2 id="2022-8"><a href="#2022-8" class="headerlink" title="2022-8"></a>2022-8</h2><blockquote>
+<p>人生的光荣，不在永不失败，而在于能够屡败屡战。——8.17</p>
+<p>时光匆匆，逝去的时光无法找回，唯有珍惜当下。 ——8.11</p>
+<p>Nothing can compenstate for the loss of time！——8.8</p>
+</blockquote>
+<blockquote>
+<p>I am back !</p>
+</blockquote>
+<h2 id="2022-7"><a href="#2022-7" class="headerlink" title="2022-7"></a>2022-7</h2><h4 id="7-6"><a href="#7-6" class="headerlink" title="7-6"></a>7-6</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">不出去看看吗，一定会出去的！</span><br><span class="line">这里太小了。</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-4"><a href="#7-4" class="headerlink" title="7-4"></a>7-4</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I will join huawei!</span><br><span class="line">stronger,fuller!</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">follow your heart！</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"># 好像一直知道自己想要什么，却一直受到干扰，一直不能坚持。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2022-6"><a href="#2022-6" class="headerlink" title="2022-6"></a>2022-6</h2><blockquote>
+<p>香农定理为什么说比特改变了世界？</p>
+<p>——2022&#x2F;5&#x2F;11                                             </p>
+</blockquote>
+<h2 id="2022-5"><a href="#2022-5" class="headerlink" title="2022-5"></a>2022-5</h2><blockquote>
+<p>智者，不与愚者争辩</p>
+<p>——2022&#x2F;5&#x2F;11</p>
+</blockquote>
+<h3 id="第一周-❌-❗️-⭕️-💯-✔️-🔗"><a href="#第一周-❌-❗️-⭕️-💯-✔️-🔗" class="headerlink" title="第一周                                                        ❌  ❗️  ⭕️  💯 ✔️ 🔗"></a>第一周                                                        ❌  ❗️  ⭕️  💯 ✔️ 🔗</h3><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>星期一</th>
+<th>星期二</th>
+<th>星期三</th>
+<th>星期四</th>
+<th>星期五</th>
+<th>星期六</th>
+<th>星期日</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单词-1</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>单词-2</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据结构</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Leetcode</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>高数</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>线性代数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>英语句子||作文</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>本周重点：复习密码学</p>
+</blockquote>
+<blockquote>
+<p>路要一步一步的走，题要一道一道的做，代码要一行一行的敲，没有捷径。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030855066.png"></p>
+</blockquote>
+<blockquote>
+<p>五一的学校</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030852046.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202205030854498.png"></p>
+</blockquote>
+<h2 id="四月"><a href="#四月" class="headerlink" title="四月"></a>四月</h2><blockquote>
+<p>人总会怀念以前</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204281146257.png"></p>
+<p>2022&#x2F;4&#x2F;8</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.chelseafc.com/">Chelsea</a> 铁血！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204281153261.png"></p>
+</blockquote>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>星期一</th>
+<th>星期二</th>
+<th>星期三</th>
+<th>星期四</th>
+<th>星期五</th>
+<th>星期六</th>
+<th>星期日</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单词-1</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>单词-2</td>
+<td>⭕</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>数据结构</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>Leetcode</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>高数</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>线性代数</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+<tr>
+<td>英语句子||作文</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+<td>⭕️</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>星期一</th>
+<th>星期二</th>
+<th>星期三</th>
+<th>星期四</th>
+<th>星期五</th>
+<th>星期六</th>
+<th>星期日</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单词-1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>单词-2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据结构</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Leetcode</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>高数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>线性代数</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>英语句子||作文</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="一些图标"><a href="#一些图标" class="headerlink" title="一些图标"></a>一些图标</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">❌  ❗️  ⭕️  💯 ✔️ 🔗 </span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>考研</category>
+        <category>安排</category>
+      </categories>
+      <tags>
+        <tag>考研</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode数据结构数组</title>
+    <url>/2022/04/22/Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</url>
+    <content><![CDATA[<h2 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26.删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26.删除有序数组中的重复项</a></h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><blockquote>
+<p>给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺&gt;序 应该保持 一致 。由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个素，那么 &gt;nums 的前 k 个元素应该保存最终结果。</p>
+<p>将最终结果插入 nums 的前 k 个位置后返回 k 。</p>
+<p>不要使用额外的空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。</p>
+</blockquote>
+<p>判题标准</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = [...]; <span class="comment">// 输入数组</span></span><br><span class="line"><span class="type">int</span>[] expectedNums = [...]; <span class="comment">// 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> k = <span class="built_in">removeDuplicates</span>(nums); <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line">assert k == expectedNums.length;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    assert nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实例1：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">输出：<span class="number">2</span>, nums = [<span class="number">1</span>,<span class="number">2</span>,_]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">2</span> ，并且原数组 nums 的前两个元素被修改为 <span class="number">1</span>, <span class="number">2</span> 。不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+
+
+
+<p>实例2：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：<span class="number">5</span>, nums = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">解释：函数应该返回新的长度 <span class="number">5</span> ， 并且原数组 nums 的前五个元素被修改为 <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> 。不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Leetcoe</category>
+        <category>数据结构</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Leetcode</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cisco Packet Tracer实验————综合实验</title>
+    <url>/2022/04/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%B1%80%E5%9F%9F%E7%BD%91/%E5%AE%9E%E9%AA%8C%E5%85%AD/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>大三局域网实验，使用Cisco Packer Tracer模拟软件，本篇内容为综合实验</p>
+</blockquote>
+<h1 id="Cisco-Packet-Tracer实验————综合实验"><a href="#Cisco-Packet-Tracer实验————综合实验" class="headerlink" title="Cisco Packet Tracer实验————综合实验"></a>Cisco Packet Tracer实验————综合实验</h1><p>您好，我的博客是<a href="http://buzhouge.top/">不周阁</a></p>
+<h3 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h3><ul>
+<li>能结合需求分析，综合运用VLAN组网技术，设计、验证较复杂的园区网络。</li>
+<li>训练面向网络工程的思维和动手能力。</li>
+</ul>
+<h3 id="主要配置命令"><a href="#主要配置命令" class="headerlink" title="主要配置命令"></a>主要配置命令</h3><h5 id="交换机配置命令"><a href="#交换机配置命令" class="headerlink" title="交换机配置命令"></a>交换机配置命令</h5><p><strong>vlan</strong> 参数  创建一个指定编号的vlan</p>
+<p><strong>name</strong> 参数 对当前的vlan命名（改名）</p>
+<p>interface 参数  进入指定接口配置模式</p>
+<p><strong>switchport mode access</strong> 将当前接口的VLAN管理模式，设置为接入模式</p>
+<p><strong>switchport access vlan</strong> 参数 将当前接口划分到指定的vlan中</p>
+<p><strong>switchport mode trunk</strong> 将当前接口的VLAN管理模式，设置为中继模式</p>
+<p><strong>switchport trunk nativie vlan</strong> 参数 设置当前接口的本征vlan属性（对中继接口有效）</p>
+<p>switchport trunk allowed vlan 参数 设置当前接口能中继的vlan列表(对中继接口有效）</p>
+<p><strong>interface vlan</strong> 参数 在指定的vlan上创建一个逻辑节点（接口），有两个身份，名字为VLAN加上的所在vlan的编号。 作为逻辑节点，它有自己的MAC地址、IP地址（需要设置），可以跟其它节点通信，通常用于网络管理；作为接口，用于内部配置，对于三层交换机可作为路由接口用。</p>
+<p><strong>Show vlan brief</strong>  以简表形式显示设备内所划分的vlan</p>
+<p><strong>Show interfaces</strong> 参数 switchport 显示指定接口的有关vlan方面的配置属性值</p>
+<p><strong>Show interfaces trunk</strong> 显示当前的设备中的中继接口</p>
+<h5 id="路由器子接口的创建、Vlan协议封装命令"><a href="#路由器子接口的创建、Vlan协议封装命令" class="headerlink" title="路由器子接口的创建、Vlan协议封装命令"></a>路由器子接口的创建、Vlan协议封装命令</h5><p><strong>interface</strong> 参数1.参数2 创建或进入指定路由器接口的某个子接口，参数1为某个物理接口的名称，参数2为子接口号</p>
+<p><strong>encapsulation dot1q</strong> 参数 指定当前子接口使用中继协议802.1q通信、指定该接口所属的vlan</p>
+<h5 id="基本配置命令"><a href="#基本配置命令" class="headerlink" title="基本配置命令"></a>基本配置命令</h5><p><strong>no</strong>  参数表 取消某操作命令，后面的参数为前面某次所执行过的命令行</p>
+<p><strong>configure terminal</strong> 进入终端配置模式</p>
+<p><strong>copy running-config startup-config</strong> 把内存中的配置文件保存到NVRAM 中</p>
+<p><strong>enable</strong> 进入特权模式</p>
+<p><strong>exit</strong> 由当前模式退出到上层模式</p>
+<p><strong>end</strong>  退出到特权模式</p>
+<p><strong>hostname</strong> 设置主机的名字</p>
+<p><strong>interface</strong> 参数  进入指定路由器接口配置模式</p>
+<p><strong>ip address</strong> 参数表  设置接口的ip地址</p>
+<p><strong>no shutdown</strong>  激活网络接口</p>
+<p><strong>show running-config</strong>  显示内存中的配置文件</p>
+<p><strong>show interfaces</strong> 参数 显示接口的信息</p>
+<p><strong>ip route</strong> 参数表   添加静态路由</p>
+<p><strong>show ip route</strong>  查看路由表</p>
+<p><strong>ping</strong>  参数   网络连通测试，参数为目标节点</p>
+<p><strong>traceroute</strong> 参数 路由跟踪测试（对于windows主机命令为tracert），参数为目标节点</p>
+<h4 id="设计任务"><a href="#设计任务" class="headerlink" title="设计任务"></a>设计任务</h4><p>为某培训机构规划设计一个网络,要求在网络层给出仿真设计。已知该机构工作场所为一个园区，有若干房间，主要用途有办公、机房、宿舍、教室，有若干电脑需要联网，需要访问因特网。目前机构内部人员（办公人员、教员）约有20人，给学员配置的主机数目约200台。</p>
+<h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>目标网络是局域网。采用Ethernet设备进行组网，出口设备采用传统的路由器，通过服务商连接INTERNET。内网全部用交换机作互联设备。需要划分三个VLAN用于隔离网管、办公、教学流量。鉴于目前的用户数、网络流量有限，部署一台核心交换机（三层交换机）即可。</p>
+<h4 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h4><h4 id="网络拓扑图"><a href="#网络拓扑图" class="headerlink" title="网络拓扑图"></a>网络拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204171830847.png"></p>
+<h4 id="主机端网络配置"><a href="#主机端网络配置" class="headerlink" title="主机端网络配置"></a>主机端网络配置</h4><table>
+<thead>
+<tr>
+<th>设置</th>
+<th>IP地址</th>
+<th>子网掩码</th>
+<th>网关地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lap0</td>
+<td>192.168.2.1</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>Lap1</td>
+<td>192.168.99.99</td>
+<td>255.255.255.0</td>
+<td>192.168.99.254</td>
+</tr>
+<tr>
+<td>Lap2</td>
+<td>192.168.2.3</td>
+<td>255.255.255.0</td>
+<td>192.168.2.254</td>
+</tr>
+<tr>
+<td>PC0</td>
+<td>192.168.3.2</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>192.168.3.4</td>
+<td>255.255.255.0</td>
+<td>192.168.3.254</td>
+</tr>
+</tbody></table>
+<h4 id="配置交换机S1"><a href="#配置交换机S1" class="headerlink" title="配置交换机S1"></a>配置交换机S1</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">enable</span> <span class="comment"># 进入特权模式</span></span><br><span class="line">conf t <span class="comment"># 进去全局模式</span></span><br><span class="line">hostname S1 <span class="comment">#修改名字为 S1</span></span><br><span class="line">vlan 2  <span class="comment"># 创建 Vlan2</span></span><br><span class="line">int fa0/2 <span class="comment"># 进入局部设置模式，选择接口f0/2</span></span><br><span class="line">sw mode access  <span class="comment"># 选择管理方式</span></span><br><span class="line">sw access vlan 2 <span class="comment"># 给该接口划分vlan</span></span><br><span class="line">vlan 3</span><br><span class="line">int fa0/3</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 3</span><br><span class="line">vlan 99 </span><br><span class="line">int fa0/4</span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 99</span><br><span class="line">int fa0/1</span><br><span class="line">sw mode trunk <span class="comment"># 选择管理方式</span></span><br><span class="line">sw trunk natitive vlan 99 <span class="comment"># 本征vlan</span></span><br><span class="line">sw trunk allowed vlan 2,3,99 <span class="comment"># 所属Vlan</span></span><br></pre></td></tr></table></figure>
+
+<p>配置好查看交换机已配置的信息</p>
+<p>show run</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271650870.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271652131.png"></p>
+<p>查看分配的子网</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271651283.png"></p>
+<p>验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271938089.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271926527.png"></p>
+<p>在s0三层上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271932590.png"></p>
+<p>配置中继接口f0&#x2F;1和f0&#x2F;2,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271937553.png"></p>
+<p>接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271934265.png"></p>
+<p>接口f0&#x2F;2</p>
+<p><img src="C:\Users\Sophon\AppData\Roaming\Typora\typora-user-images\image-20220427193930689.png" alt="image-20220427193930689"></p>
+<p>在S2上的配置</p>
+<p>建立vlan2、vlan3、vlan99,验证配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271943284.png"></p>
+<p>配置中继接口f0&#x2F;1,验证中继配置</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271944245.png"></p>
+<p>查看接口f0&#x2F;1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271945447.png"></p>
+<p>网管节点测试</p>
+<p>在S1上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable  # 进入特权模式</span><br><span class="line">conf t  # 进入全局模式</span><br><span class="line">int vlan 99 # 进入局部设置模式，选择vlan99</span><br><span class="line">ip address 192.168.99.1 255.255.255.0 # 分配IP地址</span><br><span class="line">no shutdown # 打开端口</span><br><span class="line">ip default-gateway 192.168.99.254 # 设置网关</span><br><span class="line">line vty 0 15  # 创建16个远程访问终端</span><br><span class="line">passwd 123456  # 设置远程访问密码</span><br><span class="line">privilege level 15 # 设置管理员</span><br><span class="line">transport input telnet # 设定远程登陆可以使用的协议</span><br><span class="line">login  # 远程登陆时，开启口令</span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956747.png"></p>
+<p>在S2上配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable</span><br><span class="line">conf t</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.2 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">ip default-gateway 192.168.99.254</span><br><span class="line">line vty 0 2</span><br><span class="line">passwd abc</span><br><span class="line">privilege level 2</span><br><span class="line">transport input telnet</span><br><span class="line">login </span><br></pre></td></tr></table></figure>
+
+<p>使用子网Vlan99上的PC机Lap1，用telnet远程登陆到交换机S2</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204271956584.png"></p>
+<p>基于三层交换路由方案</p>
+<p>由核心交换机S0、出口路由器共同承担全网路由</p>
+<p>R1上设置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable # 进入特权模式</span><br><span class="line">conf t # 进入全局模式</span><br><span class="line">int f0/0  #  进入局部设置模式，选择端口f0/0</span><br><span class="line">ip address 192.168.4.2 255.255.255.252 # 分配IP地址</span><br><span class="line">ip routing 192.168.2.0 255.255.255.0 192.168.4.1 # 设置路由表</span><br><span class="line">ip routing 192.168.3.0 255.255.255.0 192.168.4.1</span><br><span class="line">ip routing 192.168.99.0 255.255.255.0 192.168.4.1</span><br></pre></td></tr></table></figure>
+
+<p>S0上的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enable </span><br><span class="line">ocnf t </span><br><span class="line">int vlan 2</span><br><span class="line">ip address 192.168.2.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 3</span><br><span class="line">ip address 192.168.3.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">int vlan 99</span><br><span class="line">ip address 192.168.99.254 255.255.255.0</span><br><span class="line">no shutdown</span><br><span class="line">vlan 4 # 创建vlan 4</span><br><span class="line">int f0/3 </span><br><span class="line">sw mode access</span><br><span class="line">sw access vlan 4 </span><br><span class="line">int vlan 4</span><br><span class="line">ip address 192.168.4.1 255.255.255.252</span><br><span class="line">no switchport 	#关闭交换，开启路由</span><br><span class="line">ip routing 192.168.4.1 255.255.255.252</span><br></pre></td></tr></table></figure>
+
+<p>R1 路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023867.png"></p>
+<p>S0路由表</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272023068.png"></p>
+<p>使用vlan2 中的Lap0 分别ping vlan3中的PC1和vlan99中的Lap1</p>
+<p>Lap0 ping vlan3中的PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272026905.png"></p>
+<p>Lap0 ping vlan99中的Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272027646.png"></p>
+<p>PC1 ping Lap1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029894.png"></p>
+<p>通过测试结果可知此时局域网内的各个vlan已处于连通的状态。</p>
+<p>改动网络拓扑，连接一个INTERNET接入服务商路由器，完成相应的仿真。</p>
+<p>该处分配网段为192.168.5.0</p>
+<p>改动后的拓扑图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272029393.png"></p>
+<p>配置好之后使用PC2 ping 局域网内的主机测试连通性</p>
+<p>PC2 ping Lap0 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031126.png"></p>
+<p>PC2 ping PC1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202204272031246.png"></p>
+<h1 id="未完善先上传"><a href="#未完善先上传" class="headerlink" title="未完善先上传"></a>未完善先上传</h1>]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>局域网</category>
+      </categories>
+      <tags>
+        <tag>交换机</tag>
+        <tag>计算机网络</tag>
+        <tag>Cisco</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>铁血蓝军，切尔西！</title>
+    <url>/2022/04/28/%E8%B6%B3%E7%90%83/%E5%88%87%E5%B0%94%E8%A5%BF/%E5%88%87%E5%B0%94%E8%A5%BF/</url>
+    <content><![CDATA[<h1 id="切尔西！"><a href="#切尔西！" class="headerlink" title="切尔西！"></a>切尔西！</h1><blockquote>
+<p>Mount!</p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071033796.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071034135.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071037834.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/sophon123/buzhouge_img1/202207071000854.png"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>足球</category>
+        <category>切尔西</category>
+      </categories>
+      <tags>
+        <tag>足球</tag>
+        <tag>切尔西</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chelsea History</title>
+    <url>/2022/07/07/%E8%B6%B3%E7%90%83/%E5%88%87%E5%B0%94%E8%A5%BF/Chelsea%20History/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>足球</category>
+        <category>Chelsea History</category>
+      </categories>
+      <tags>
+        <tag>足球</tag>
+        <tag>切尔西</tag>
       </tags>
   </entry>
 </search>
